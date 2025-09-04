@@ -1,0 +1,1 @@
+pyuic stats.ui -o stats.py
