@@ -40,7 +40,7 @@
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
-### 文件目录说明
+## 文件目录说明
 
 ```
 Intelligent-Traffic-System
@@ -59,39 +59,39 @@ Intelligent-Traffic-System
 
 ```
 
-### 配置安装
+## 配置安装
 
-#### 克隆项目
+### 克隆项目
 
 ```sh
 git clone https://github.com/yihangli1118/Intelligent-Traffic-System.git
 ```
 
-#### 创建虚拟环境
+### 创建虚拟环境
 
 ```sh
 py -3.8 -m venv .venv
 ```
 
-#### 激活虚拟环境
+### 激活虚拟环境
 
 ```sh
 .venv\Scripts\activate.bat
 ```
 
-#### 安装项目依赖
+### 安装项目依赖
 
 ```sh
 pip install -r requirements.txt
 ```
 
-#### 运行项目
+### 运行项目
 
 ```sh
 python main.py
 ```
 
-### 项目文档
+## 项目文档
 
 <p align="center">
     <a href="https://github.com/shaojintian/Best_README_template">需求分析</a>
@@ -101,19 +101,49 @@ python main.py
     <a href="https://github.com/shaojintian/Best_README_template/issues">详情设计</a>
   </p>
 
-### 开发的架构 
+## 界面UI
+
+### **1.登录界面**
+
+![](images/docs/ui/login.png)
+
+### **2.主页面**
+
+![](images/docs/ui/main.png)
+
+### **3.实时监控页面**
+
+![](images/docs/ui/real-time%20monitor.png)
+
+### **4.信息查询页面**
+
+![](images/docs/ui/info-query.png)
+
+### **5.违规查询页面**
+
+![](images/docs/ui/vio-query.png)
+
+### **6.流量查询页面**
+
+![](images/docs/ui/flow-query.png)
+
+### **7.关于我们页面**
+
+![](images/docs/ui/about-us.png)
+
+## 开发的架构 
 
 请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
-### 部署
+## 项目部署
 
 暂无
 
-### 使用到的框架
+## 使用到的框架
 
-#### 1. 核心框架与技术栈
+### 1. 核心框架与技术栈
 
-##### 1.1 服务端框架
+#### 1.1 服务端框架
 | 框架名称       | 版本要求   | 用途说明                     |
 |----------------|------------|------------------------------|
 | FastAPI        | 0.95+      | RESTful API服务框架           |
@@ -123,7 +153,7 @@ python main.py
 | Celery         | 5.3+       | 分布式任务队列                |
 | Redis          | 7.0+       | 缓存与消息代理                |
 
-##### 1.2 AI分析框架
+#### 1.2 AI分析框架
 | 框架名称       | 版本要求   | 用途说明                     |
 |----------------|------------|------------------------------|
 | PyTorch        | 2.0+       | 深度学习训练与推理框架        |
@@ -132,14 +162,14 @@ python main.py
 | TensorRT       | 8.6+       | NVIDIA GPU加速推理框架        |
 | MMDetection    | 3.0+       | 目标检测算法框架              |
 
-##### 1.3 客户端框架
+#### 1.3 客户端框架
 | 框架名称       | 版本要求   | 用途说明                     |
 |----------------|------------|------------------------------|
 | PyQt5          | 5.15+      | 桌面应用GUI框架               |
 | QtWebEngine    | 5.15+      | 嵌入式浏览器组件              |
 | QMaterial      | 1.3+       | Material Design风格组件库     |
 
-##### 1.4 Web前端框架
+#### 1.4 Web前端框架
 | 框架名称       | 版本要求   | 用途说明                     |
 |----------------|------------|------------------------------|
 | Vue.js         | 3.2+       | 前端MVVM框架                 |
@@ -147,16 +177,16 @@ python main.py
 | ECharts        | 5.4+       | 数据可视化库                  |
 | OpenLayers     | 7.4+       | 地理信息系统地图库            |
 
-#### 2. 关键依赖库
+### 2. 关键依赖库
 
-##### 2.1 视频处理
+#### 2.1 视频处理
 ```python
 ffmpeg-python == 0.2.0+  # 视频流处理
 PyAV == 11.0.0+          # 音视频编解码
 imutils == 0.5.4+        # 图像处理工具集
 ```
 
-##### 2.2 数据处理
+#### 2.2 数据处理
 
 ```
 pandas == 2.0.0+         # 结构化数据分析
@@ -164,7 +194,7 @@ numpy == 1.24.0+         # 数值计算基础库
 polars == 0.18.0+        # 高性能数据帧处理
 ```
 
-##### 2.3 网络通信
+#### 2.3 网络通信
 
 ```
 httpx == 0.24.0+         # 异步HTTP客户端
@@ -172,9 +202,9 @@ websockets == 11.0.0+    # WebSocket通信
 pika == 1.3.0+           # RabbitMQ客户端
 ```
 
-#### 3. 开发环境配置
+### 3. 开发环境配置
 
-##### 3.1 Python环境
+#### 3.1 Python环境
 
 ```
 conda create -n its python=3.8.10
@@ -182,7 +212,7 @@ conda install -c pytorch pytorch torchvision torchaudio
 pip install -r requirements.txt
 ```
 
-##### 3.2 数据库配置
+#### 3.2 数据库配置
 
 ```
 # config/database.yaml
@@ -194,7 +224,7 @@ mysql:
   database: its_platform
 ```
 
-##### 3.3 AI模型部署
+#### 3.3 AI模型部署
 
 ```
 # Dockerfile示例
@@ -203,7 +233,7 @@ RUN pip install torch-2.0.0+cu118 -f https://download.pytorch.org/whl/torch_stab
 COPY ./models /app/models
 ```
 
-#### 4. 框架架构图
+### 4. 框架架构图
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -227,7 +257,7 @@ COPY ./models /app/models
 └──────────────────────┘
 ```
 
-#### 5. 扩展接口
+### 5. 扩展接口
 
 | 接口类型   | 协议标准       | 用途说明         |
 | ---------- | -------------- | ---------------- |
@@ -236,11 +266,11 @@ COPY ./models /app/models
 | 消息推送   | WebSocket/MQTT | 实时事件通知     |
 | 地图服务   | WMS/TMS        | 地理信息数据服务 |
 
-### 贡献者
+## 贡献者
 
 请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
 
-#### 如何参与开源项目
+## 如何参与开源项目
 
 贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
 
@@ -253,11 +283,11 @@ COPY ./models /app/models
 
 
 
-### 版本控制
+## 版本控制
 
 该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
 
-### 作者
+## 作者
 
 xxx@xxxx
 
@@ -265,11 +295,11 @@ xxx@xxxx
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
-### 版权说明
+## 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
 
-### 鸣谢
+## 鸣谢
 
 
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
