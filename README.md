@@ -1,51 +1,36 @@
+<h1 align="center" style="font-size: 2.5rem; font-weight: bold;">智能交通监控管理系统</h1>
+<h2 align="center" style="font-size: 2.5rem; font-weight: bold;">V 1.0</h2>
 
-
-# 智能交通监控管理系统
-
-ProjectName and Description
-
-<!-- PROJECT SHIELDS -->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-<!-- PROJECT LOGO -->
-<br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">"完美的"README模板</h3>
-  <p align="center">
-    一个"完美的"README模板去快速开始你的项目！
-    <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
-    ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
-    ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
-  </p>
-
+  <img src="https://img.shields.io/badge/-Python-%231C81BB?logo=python&logoColor=%231C81BB&label=%20&labelColor=%23F7F7F7" alt="Python">
+  <img src="https://img.shields.io/badge/-YOLO-%23B13AAE?logo=yolo&logoColor=%23B13AAE&label=%20&labelColor=%23F7F7F7" alt="YOLO">
+  <img src="https://img.shields.io/badge/-GitHub-%234496C9?logo=github&logoColor=%234496C9&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="GitHub">
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/-BILIBILI-%23FF6597?logo=bilibili&logoColor=%23FF6597&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="BILIBILI">
+  <img src="https://img.shields.io/badge/-%E7%9F%A5%E4%B9%8E-%230067FF?logo=zhihu&logoColor=%230067FF&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="知乎">
+  <img src="https://img.shields.io/badge/-CSDN-%23FC5531?logo=csdn&logoColor=%23FC5531&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="CSDN">
 </p>
 
 
- 本篇README.md面向开发者
+<p align="center">
+  <a href="https://github.com/yihangli1118/Intelligent-Traffic-System.git/">
+    <img src="images/logo.png" alt="Logo" height="240">
+  </a>
+  <p align="center">
+    <a href="https://github.com/shaojintian/Best_README_template">需求分析</a>
+    ·
+    <a href="https://github.com/shaojintian/Best_README_template/issues">概要设计</a>
+    ·
+    <a href="https://github.com/shaojintian/Best_README_template/issues">详情设计</a>
+  </p>
+</p>
 
 ## 目录
 
-- [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
-  - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
+- [配置安装](#配置安装)
 - [开发的架构](#开发的架构)
 - [部署](#部署)
 - [使用到的框架](#使用到的框架)
@@ -55,52 +40,66 @@ ProjectName and Description
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
-### 上手指南
-
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
-
-
-
-###### 开发前的配置要求
-
-1. xxxxx x.x.x
-2. xxxxx x.x.x
-
-###### **安装步骤**
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-
-```sh
-git clone https://github.com/shaojintian/Best_README_template.git
-```
-
 ### 文件目录说明
-eg:
 
 ```
-filetree 
-├── ARCHITECTURE.md
+Intelligent-Traffic-System
 ├── LICENSE.txt
 ├── README.md
-├── /account/
-├── /bbs/
+├── requirements.txt
+├── /images/
 ├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+│  ├── architecture design.md
+│  ├── detailed design.md
+│  ├── requirement analysis.md
+├── /src/
+│  ├── /plateDetect/
+│  ├── /targetDetect/
+│  ├── /ui/
 
 ```
 
+### 配置安装
 
+#### 克隆项目
 
+```sh
+git clone https://github.com/yihangli1118/Intelligent-Traffic-System.git
+```
 
+#### 创建虚拟环境
+
+```sh
+py -3.8 -m venv .venv
+```
+
+#### 激活虚拟环境
+
+```sh
+.venv\Scripts\activate.bat
+```
+
+#### 安装项目依赖
+
+```sh
+pip install -r requirements.txt
+```
+
+#### 运行项目
+
+```sh
+python main.py
+```
+
+### 项目文档
+
+<p align="center">
+    <a href="https://github.com/shaojintian/Best_README_template">需求分析</a>
+    ·
+    <a href="https://github.com/shaojintian/Best_README_template/issues">概要设计</a>
+    ·
+    <a href="https://github.com/shaojintian/Best_README_template/issues">详情设计</a>
+  </p>
 
 ### 开发的架构 
 
@@ -112,9 +111,130 @@ filetree
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+#### 1. 核心框架与技术栈
+
+##### 1.1 服务端框架
+| 框架名称       | 版本要求   | 用途说明                     |
+|----------------|------------|------------------------------|
+| FastAPI        | 0.95+      | RESTful API服务框架           |
+| Uvicorn        | 0.22+      | ASGI服务器实现                |
+| SQLAlchemy     | 2.0+       | ORM数据库操作框架             |
+| Alembic        | 1.10+      | 数据库迁移工具                |
+| Celery         | 5.3+       | 分布式任务队列                |
+| Redis          | 7.0+       | 缓存与消息代理                |
+
+##### 1.2 AI分析框架
+| 框架名称       | 版本要求   | 用途说明                     |
+|----------------|------------|------------------------------|
+| PyTorch        | 2.0+       | 深度学习训练与推理框架        |
+| OpenCV         | 4.8+       | 计算机视觉处理库              |
+| ONNX Runtime   | 1.14+      | 模型跨平台部署框架            |
+| TensorRT       | 8.6+       | NVIDIA GPU加速推理框架        |
+| MMDetection    | 3.0+       | 目标检测算法框架              |
+
+##### 1.3 客户端框架
+| 框架名称       | 版本要求   | 用途说明                     |
+|----------------|------------|------------------------------|
+| PyQt5          | 5.15+      | 桌面应用GUI框架               |
+| QtWebEngine    | 5.15+      | 嵌入式浏览器组件              |
+| QMaterial      | 1.3+       | Material Design风格组件库     |
+
+##### 1.4 Web前端框架
+| 框架名称       | 版本要求   | 用途说明                     |
+|----------------|------------|------------------------------|
+| Vue.js         | 3.2+       | 前端MVVM框架                 |
+| Element Plus   | 2.3+       | UI组件库                     |
+| ECharts        | 5.4+       | 数据可视化库                  |
+| OpenLayers     | 7.4+       | 地理信息系统地图库            |
+
+#### 2. 关键依赖库
+
+##### 2.1 视频处理
+```python
+ffmpeg-python == 0.2.0+  # 视频流处理
+PyAV == 11.0.0+          # 音视频编解码
+imutils == 0.5.4+        # 图像处理工具集
+```
+
+##### 2.2 数据处理
+
+```
+pandas == 2.0.0+         # 结构化数据分析
+numpy == 1.24.0+         # 数值计算基础库
+polars == 0.18.0+        # 高性能数据帧处理
+```
+
+##### 2.3 网络通信
+
+```
+httpx == 0.24.0+         # 异步HTTP客户端
+websockets == 11.0.0+    # WebSocket通信
+pika == 1.3.0+           # RabbitMQ客户端
+```
+
+#### 3. 开发环境配置
+
+##### 3.1 Python环境
+
+```
+conda create -n its python=3.8.10
+conda install -c pytorch pytorch torchvision torchaudio
+pip install -r requirements.txt
+```
+
+##### 3.2 数据库配置
+
+```
+# config/database.yaml
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: its_admin
+  password: secure_password
+  database: its_platform
+```
+
+##### 3.3 AI模型部署
+
+```
+# Dockerfile示例
+FROM nvidia/cuda:12.2-base
+RUN pip install torch-2.0.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+COPY ./models /app/models
+```
+
+#### 4. 框架架构图
+
+```
+┌─────────────────────────────────────────────────┐
+│                  Client (PyQt5)                 │
+└───────────────┬─────────────────┬───────────────┘
+                │ HTTP/WebSocket  │
+┌───────────────▼─────┐   ┌───────▼───────────────┐
+│   FastAPI Server    │   │    Web Frontend       │
+│ ┌─────────────────┐ │   │ (Vue.js + Element Plus)│
+│ │    REST API     │ │   └──────────┬────────────┘
+│ └────────┬────────┘ │              │
+│          │          │              │
+│ ┌────────▼────────┐ │   ┌──────────▼────────────┐
+│ │   Celery Worker  │ │   │      Redis Cache      │
+│ └────────┬────────┘ │   └──────────┬────────────┘
+│          │          │              │
+│ ┌────────▼────────┐ │   ┌──────────▼────────────┐
+│ │  AI Inference   │ │   │    MySQL Database     │
+│ │ (PyTorch/TRT)   │ │   └──────────────────────┘
+│ └─────────────────┘ │
+└──────────────────────┘
+```
+
+#### 5. 扩展接口
+
+| 接口类型   | 协议标准       | 用途说明         |
+| ---------- | -------------- | ---------------- |
+| 视频流接入 | RTSP/ONVIF     | 摄像头设备接入   |
+| 数据交换   | HTTPS/REST     | 与交警平台对接   |
+| 消息推送   | WebSocket/MQTT | 实时事件通知     |
+| 地图服务   | WMS/TMS        | 地理信息数据服务 |
 
 ### 贡献者
 
@@ -157,9 +277,9 @@ xxx@xxxx
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Pages](https://pages.github.com)
 - [Animate.css](https://daneden.github.io/animate.css)
-- [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
 
 <!-- links -->
+
 [your-project-path]:shaojintian/Best_README_template
 [contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
 [contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
