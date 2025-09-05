@@ -19,11 +19,11 @@
     <img src="images/logo.png" alt="Logo" height="240">
   </a>
   <p align="center">
-    <a href="https://github.com/shaojintian/Best_README_template">需求分析</a>
+    <a href="https://github.com/yihangli1118/Intelligent-Traffic-System/blob/master/docs/requirement%20analysis.md">需求分析</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">概要设计</a>
+    <a href="https://github.com/yihangli1118/Intelligent-Traffic-System/blob/master/docs/architecture%20design.md">概要设计</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">详情设计</a>
+    <a href="https://github.com/yihangli1118/Intelligent-Traffic-System/blob/master/docs/detailed%20design.md">详情设计</a>
   </p>
 </p>
 
