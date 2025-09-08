@@ -1,19 +1,6 @@
 <h1 align="center" style="font-size: 2.5rem; font-weight: bold;">智能交通监控管理系统</h1>
 <h2 align="center" style="font-size: 2.5rem; font-weight: bold;">V 1.0</h2>
 
-
-<p align="center">
-  <img src="https://img.shields.io/badge/-Python-%231C81BB?logo=python&logoColor=%231C81BB&label=%20&labelColor=%23F7F7F7" alt="Python">
-  <img src="https://img.shields.io/badge/-YOLO-%23B13AAE?logo=yolo&logoColor=%23B13AAE&label=%20&labelColor=%23F7F7F7" alt="YOLO">
-  <img src="https://img.shields.io/badge/-GitHub-%234496C9?logo=github&logoColor=%234496C9&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="GitHub">
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/-BILIBILI-%23FF6597?logo=bilibili&logoColor=%23FF6597&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="BILIBILI">
-  <img src="https://img.shields.io/badge/-%E7%9F%A5%E4%B9%8E-%230067FF?logo=zhihu&logoColor=%230067FF&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="知乎">
-  <img src="https://img.shields.io/badge/-CSDN-%23FC5531?logo=csdn&logoColor=%23FC5531&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="CSDN">
-</p>
-
-
 <p align="center">
   <a href="https://github.com/yihangli1118/Intelligent-Traffic-System.git/">
     <img src="images/logo.png" alt="Logo" height="240">
@@ -26,6 +13,16 @@
     <a href="https://github.com/yihangli1118/Intelligent-Traffic-System/blob/master/docs/detailed%20design.md">详情设计</a>
   </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/-Python-%231C81BB?logo=python&logoColor=%231C81BB&label=%20&labelColor=%23F7F7F7" alt="Python">
+  <img src="https://img.shields.io/badge/-YOLO-%23B13AAE?logo=yolo&logoColor=%23B13AAE&label=%20&labelColor=%23F7F7F7" alt="YOLO">
+  <img src="https://img.shields.io/badge/-GitHub-%234496C9?logo=github&logoColor=%234496C9&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="GitHub">
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/-BILIBILI-%23FF6597?logo=bilibili&logoColor=%23FF6597&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="BILIBILI">
+  <img src="https://img.shields.io/badge/-%E7%9F%A5%E4%B9%8E-%230067FF?logo=zhihu&logoColor=%230067FF&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="知乎">
+  <img src="https://img.shields.io/badge/-CSDN-%23FC5531?logo=csdn&logoColor=%23FC5531&label=%20&labelColor=%23F7F7F7&link=https%3A%2F%2Fgithub.com%2Fyihangli1118%2FIntelligent-Traffic-System" alt="CSDN">
+</p>
 
 ## 目录
 
