@@ -1,6 +1,6 @@
 # navigation_manager.py
 from PyQt5.QtWidgets import QWidget
-from stats import Ui_Form
+from views.stats import Ui_Form
 
 
 class NavigationManager:

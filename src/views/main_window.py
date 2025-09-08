@@ -1,15 +1,15 @@
 # main_window.py
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget
-from stats import Ui_Form
-from navigation_manager import NavigationManager
-from vehicle_table_manager import VehicleTableManager
-from violation_table import ViolationTableManager
-from weather_time_display import WeatherTimeDisplayManager
-from flow_table import FlowTableManager
-# 导入关于我们页面管理器
-from about_manager import AboutManager
-import resource
+from views.stats import Ui_Form
+from views.navigation_manager import NavigationManager
+from views.vehicle_table_manager import VehicleTableManager
+from views.violation_table import ViolationTableManager
+from views.weather_time_display import WeatherTimeDisplayManager
+from views.flow_table import FlowTableManager
+from views.about_manager import AboutManager
+from views.videoView import VideoView
+import views.resource
 
 class MainWindow(QWidget, Ui_Form):
     def __init__(self):
@@ -33,6 +33,9 @@ class MainWindow(QWidget, Ui_Form):
 
         # 初始化关于我们页面管理器
         self.about_manager = AboutManager(self)
+
+        # 初始化视频播放
+        self.video_view = VideoView(self)
 
         # 设置 left_content 布局
         self.setup_left_content_layout()

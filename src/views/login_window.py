@@ -6,8 +6,11 @@ from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QFont, QPixmap, QIcon
 
 # 导入主界面
-from main_window import MainWindow as MainAppWindow
-from stats import Ui_Form  # 导入stats界面的Ui_Form类
+from views.main_window import MainWindow as MainAppWindow
+from views.stats import Ui_Form  # 导入stats界面的Ui_Form类
+
+# 导入认证控制器
+# from controllers.authController import AuthController
 
 
 class LoginWindow(QMainWindow):
@@ -28,11 +31,14 @@ class LoginWindow(QMainWindow):
         # 设置登录区域
         self.setup_login_area()
 
+        from controllers.authController import AuthController
+        self.auth_controller = AuthController(self)
+
         # 模拟用户数据库（实际应用中应使用真实数据库）
-        self.users = {
-            "1": "666",  # 修改管理员账号为1，密码为666
-            "user": "666"
-        }
+        # self.users = {
+        #     "1": "666",  # 修改管理员账号为1，密码为666
+        #     "user": "666"
+        # }
 
     def hide_unnecessary_elements(self):
         """
@@ -408,17 +414,20 @@ class LoginWindow(QMainWindow):
         username = self.username_input.text().strip()
         password = self.password_input.text().strip()
 
-        if not username or not password:
-            QMessageBox.warning(self, "登录失败", "请输入用户名和密码！")
-            return
+        # 使用控制器处理登录
+        self.auth_controller.handle_login(username, password)
 
-        if username in self.users and self.users[username] == password:
-            # 登录成功后显示1秒提示，然后立即打开主程序界面
-            self.show_success_message(f"欢迎，{username}！")
-            # 1秒后打开主程序界面
-            QTimer.singleShot(1000, self.open_main_window)
-        else:
-            QMessageBox.warning(self, "登录失败", "用户名或密码错误！")
+        # if not username or not password:
+        #     QMessageBox.warning(self, "登录失败", "请输入用户名和密码！")
+        #     return
+        #
+        # if username in self.users and self.users[username] == password:
+        #     # 登录成功后显示1秒提示，然后立即打开主程序界面
+        #     self.show_success_message(f"欢迎，{username}！")
+        #     # 1秒后打开主程序界面
+        #     QTimer.singleShot(1000, self.open_main_window)
+        # else:
+        #     QMessageBox.warning(self, "登录失败", "用户名或密码错误！")
 
     def show_success_message(self, message):
         """显示成功消息1秒后消失"""
@@ -461,35 +470,38 @@ class LoginWindow(QMainWindow):
         password = self.reg_password_input.text().strip()
         confirm_password = self.reg_confirm_password_input.text().strip()
 
-        if not username or not password or not confirm_password:
-            QMessageBox.warning(self, "注册失败", "请填写所有字段！")
-            return
+        # 使用控制器处理注册
+        self.auth_controller.handle_register(username, password, confirm_password)
 
-        if len(username) < 3:
-            QMessageBox.warning(self, "注册失败", "用户名至少需要3个字符！")
-            return
-
-        if len(password) < 6:
-            QMessageBox.warning(self, "注册失败", "密码至少需要6个字符！")
-            return
-
-        if password != confirm_password:
-            QMessageBox.warning(self, "注册失败", "两次输入的密码不一致！")
-            return
-
-        if username in self.users:
-            QMessageBox.warning(self, "注册失败", "该用户名已存在！")
-            return
-
-        # 注册成功
-        self.users[username] = password
-        QMessageBox.information(self, "注册成功", "注册成功，请登录！")
-        self.show_login_page()
-
-        # 清空注册表单
-        self.reg_username_input.clear()
-        self.reg_password_input.clear()
-        self.reg_confirm_password_input.clear()
+        # if not username or not password or not confirm_password:
+        #     QMessageBox.warning(self, "注册失败", "请填写所有字段！")
+        #     return
+        #
+        # if len(username) < 3:
+        #     QMessageBox.warning(self, "注册失败", "用户名至少需要3个字符！")
+        #     return
+        #
+        # if len(password) < 6:
+        #     QMessageBox.warning(self, "注册失败", "密码至少需要6个字符！")
+        #     return
+        #
+        # if password != confirm_password:
+        #     QMessageBox.warning(self, "注册失败", "两次输入的密码不一致！")
+        #     return
+        #
+        # if username in self.users:
+        #     QMessageBox.warning(self, "注册失败", "该用户名已存在！")
+        #     return
+        #
+        # # 注册成功
+        # self.users[username] = password
+        # QMessageBox.information(self, "注册成功", "注册成功，请登录！")
+        # self.show_login_page()
+        #
+        # # 清空注册表单
+        # self.reg_username_input.clear()
+        # self.reg_password_input.clear()
+        # self.reg_confirm_password_input.clear()
 
     def open_main_window(self):
         """打开主窗口"""
