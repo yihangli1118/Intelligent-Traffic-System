@@ -25,7 +25,7 @@
     ·
     <a href="https://github.com/yihangli1118/Intelligent-Traffic-System/blob/master/docs/detailed%20design.md">详情设计</a>
   </p>
-</p>
+
 
 ## 目录
 
@@ -55,9 +55,14 @@ Intelligent-Traffic-System
 │  ├── detailed design.md
 │  ├── requirement analysis.md
 ├── /src/
+│  ├── main.py
+│  ├── /controllers/
+│  ├── /models/
+│  ├── /services/
+│  ├── /utils/
 │  ├── /plateDetect/
 │  ├── /targetDetect/
-│  ├── /ui/
+│  ├── /views/
 
 ```
 

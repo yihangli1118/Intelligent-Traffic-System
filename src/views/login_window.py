@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QFont, QPixmap, QIcon
 
 # 导入主界面
-from mian_window import MainWindow as MainAppWindow
+from main_window import MainWindow as MainAppWindow
 from stats import Ui_Form  # 导入stats界面的Ui_Form类
 
 

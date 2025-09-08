@@ -1426,3 +1426,4 @@ class Ui_Form(object):
         self.pBtn_vio_statistics.setText(_translate("Form", "违规数据分析"))
         self.label_query_flow.setText(_translate("Form", "历史数据"))
         self.pBtn_flow_statistics.setText(_translate("Form", "流量数据分析"))
+
