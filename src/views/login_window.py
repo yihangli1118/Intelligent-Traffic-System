@@ -1,26 +1,27 @@
-# login_window.py
+# file: src/views/login_window.py
 import sys
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QLabel, QLineEdit, QPushButton, QFrame, QMessageBox, QStackedWidget)
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QFont, QPixmap, QIcon
 
-# 导入主界面
-from views.main_window import MainWindow as MainAppWindow
 from views.stats import Ui_Form  # 导入stats界面的Ui_Form类
-
-# 导入认证控制器
-# from controllers.authController import AuthController
-
+from views.main_window import MainWindow  # 只导入MainWindow
 
 class LoginWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        # 设置窗口无边框
+        self.setWindowFlags(Qt.FramelessWindowHint)
+
         self.ui = Ui_Form()  # 使用stats的界面模板
         self.ui.setupUi(self)
 
         # 设置窗口标题
         self.setWindowTitle("智能交通管理系统 - 登录")
+
+        # 添加关闭回调属性
+        self.close_callback = None
 
         # 隐藏不需要的界面元素
         self.hide_unnecessary_elements()
@@ -34,11 +35,47 @@ class LoginWindow(QMainWindow):
         from controllers.authController import AuthController
         self.auth_controller = AuthController(self)
 
+        # 连接顶部按钮功能
+        self.setup_top_buttons()
+
         # 模拟用户数据库（实际应用中应使用真实数据库）
         # self.users = {
         #     "1": "666",  # 修改管理员账号为1，密码为666
         #     "user": "666"
         # }
+
+    def setup_top_buttons(self):
+        """
+        设置顶部按钮功能 - 登录界面的关闭按钮真正退出程序
+        """
+        # 连接关闭按钮到退出程序
+        self.ui.closeAppBtn.clicked.connect(self.close_application)
+
+        # 连接最大化/恢复按钮
+        self.ui.maximizeRestoreAppBtn.clicked.connect(self.toggle_maximize)
+
+        # 连接最小化按钮
+        self.ui.minimizeAppBtn.clicked.connect(self.showMinimized)
+
+    def close_application(self):
+        """
+        真正退出应用程序
+        """
+        # 如果有 WindowManager，通过它来退出应用
+        if hasattr(self, 'window_manager') and self.window_manager:
+            self.window_manager.quit_application()
+        else:
+            # 直接退出应用程序
+            QApplication.quit()
+
+    def toggle_maximize(self):
+        """
+        切换窗口最大化/恢复状态
+        """
+        if self.isMaximized():
+            self.showNormal()
+        else:
+            self.showMaximized()
 
     def hide_unnecessary_elements(self):
         """
@@ -195,7 +232,8 @@ class LoginWindow(QMainWindow):
         # 注册链接
         register_layout = QHBoxLayout()
         register_label = QLabel("还没有账号?")
-        register_label.setStyleSheet("color: white; font-size: 10pt; font-family: 'Microsoft YaHei UI'; background-color: transparent;")
+        register_label.setStyleSheet(
+            "color: white; font-size: 10pt; font-family: 'Microsoft YaHei UI'; background-color: transparent;")
         register_label.setFixedHeight(20)  # 固定标签高度
 
         register_button = QPushButton("立即注册")
@@ -356,7 +394,8 @@ class LoginWindow(QMainWindow):
         # 返回登录链接
         login_layout = QHBoxLayout()
         login_label = QLabel("已有账号?")
-        login_label.setStyleSheet("color: white; font-size: 10pt; font-family: 'Microsoft YaHei UI'; background-color: transparent;")
+        login_label.setStyleSheet(
+            "color: white; font-size: 10pt; font-family: 'Microsoft YaHei UI'; background-color: transparent;")
         login_label.setFixedHeight(20)  # 固定标签高度
 
         login_button = QPushButton("立即登录")
@@ -505,12 +544,27 @@ class LoginWindow(QMainWindow):
 
     def open_main_window(self):
         """打开主窗口"""
-        # 关闭登录窗口
-        self.close()
+        # 通过 WindowManager 显示主窗口
+        from views.window_manager import WindowManager
 
-        # 创建并显示主程序窗口
-        self.main_window = MainAppWindow()
-        self.main_window.show()
+        # 如果登录窗口有 window_manager 引用，则使用它来显示主窗口
+        if hasattr(self, 'window_manager') and self.window_manager:
+            self.window_manager.show_main_window()
+        else:
+            # 否则直接创建主窗口（备用方案）
+            # 关闭登录窗口
+            self.close()
 
+            # 创建并显示主程序窗口
+            self.main_window = MainWindow()
+            # 设置主窗口关闭后的回调，返回登录界面
+            self.main_window.close_callback = self.return_to_login
+            self.main_window.show()
+
+    def return_to_login(self):
+        """返回登录界面的回调函数"""
+        # 重新显示登录窗口
+        new_login = LoginWindow()
+        new_login.show()
 
 # 移除了原来的 main() 函数和 if __name__ == "__main__": 部分

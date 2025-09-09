@@ -2,7 +2,8 @@
 
 import torch
 import torch.nn as nn
-
+import sys
+sys.path.append("..")
 from utils.general import bbox_iou
 from utils.torch_utils import is_parallel
 

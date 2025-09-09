@@ -46,6 +46,7 @@ Intelligent-Traffic-System
 ├── LICENSE.txt
 ├── README.md
 ├── requirements.txt
+├── .venv
 ├── /images/
 ├── /docs/
 │  ├── architecture design.md
@@ -94,6 +95,19 @@ pip install -r requirements.txt
 
 ```sh
 python main.py
+```
+
+### Tips
+在运行时若出现下面报错
+```sh
+qt.qpa.plugin: Could not find the Qt platform plugin "windows" in ""
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+```
+原因是运行时找不到Qt的平台插件（platform plugin）
+
+解决方法是在运行程序前，设置`QT_QPA_PLATFORM_PLUGIN_PATH`环境变量，指向Qt插件目录
+```sh
+$env:QT_QPA_PLATFORM_PLUGIN_PATH = "$pwd\..\.venv\Lib\site-packages\PyQt5\Qt5\plugins"
 ```
 
 ## 项目文档

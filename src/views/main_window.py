@@ -1,6 +1,7 @@
-# main_window.py
+# file: src/views/main_window.py
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtCore import Qt
 from views.stats import Ui_Form
 from views.navigation_manager import NavigationManager
 from views.vehicle_table_manager import VehicleTableManager
@@ -9,12 +10,27 @@ from views.weather_time_display import WeatherTimeDisplayManager
 from views.flow_table import FlowTableManager
 from views.about_manager import AboutManager
 from views.videoView import VideoView
+from utils.session_manager import SessionManager
 import views.resource
+
 
 class MainWindow(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+        # 获取当前登录用户并显示在界面上
+        self.session_manager = SessionManager()
+        current_user = self.session_manager.get_current_user()
+        if current_user:
+            self.user_name.setText(current_user)
+
+        # 设置窗口属性
+        self.setWindowFlags(Qt.FramelessWindowHint)  # 无边框窗口
+        self.setMinimumSize(1331, 831)  # 设置最小尺寸
+
+        # 添加关闭回调属性
+        self.close_callback = None
 
         # 初始化导航管理器
         self.nav_manager = NavigationManager(self)
@@ -49,8 +65,33 @@ class MainWindow(QWidget, Ui_Form):
         # 设置流量查询页面布局
         self.setup_flow_layout()
 
+        # 连接顶部按钮功能
+        self.setup_top_buttons()
+
         # 可以在这里添加其他初始化代码
         self.setWindowTitle("智能交通管理系统")
+
+    def setup_top_buttons(self):
+        """
+        设置顶部按钮功能
+        """
+        # 连接关闭按钮 - 关闭主窗口并返回登录界面
+        self.closeAppBtn.clicked.connect(self.close)  # 这里保持不变
+
+        # 连接最大化/恢复按钮
+        self.maximizeRestoreAppBtn.clicked.connect(self.toggle_maximize)
+
+        # 连接最小化按钮
+        self.minimizeAppBtn.clicked.connect(self.showMinimized)
+
+    def toggle_maximize(self):
+        """
+        切换窗口最大化/恢复状态
+        """
+        if self.isMaximized():
+            self.showNormal()
+        else:
+            self.showMaximized()
 
     # main.py (另一种方式)
     def setup_left_content_layout(self):
@@ -86,10 +127,13 @@ class MainWindow(QWidget, Ui_Form):
 
     def closeEvent(self, event):
         """
-        窗口关闭事件，停止定时器
+        窗口关闭事件，停止定时器并返回登录界面
         """
         # 停止所有定时器
         self.weather_time_manager.stop_timers()
-        event.accept()
 
-# 移除了原来的 main() 函数和 if __name__ == "__main__": 部分
+        # 调用关闭回调（如果存在）
+        if self.close_callback:
+            self.close_callback()
+
+        event.accept()

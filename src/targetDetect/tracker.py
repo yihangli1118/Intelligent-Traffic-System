@@ -1,13 +1,22 @@
 import cv2
 import torch
 import numpy as np
+import os
 
-from deep_sort.utils.parser import get_config
-from deep_sort.deep_sort import DeepSort
+from targetDetect.deep_sort.utils.parser import get_config
+from targetDetect.deep_sort.deep_sort import DeepSort
+
+# 获取当前文件所在目录的绝对路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(current_dir, "deep_sort", "configs", "deep_sort.yaml")
 
 cfg = get_config()
-cfg.merge_from_file("./deep_sort/configs/deep_sort.yaml")
-deepsort = DeepSort(cfg.DEEPSORT.REID_CKPT,
+cfg.merge_from_file(config_path)
+
+# 构建模型文件的绝对路径
+model_path = os.path.join(current_dir, "deep_sort", "deep_sort", "deep", "checkpoint", "ckpt.t7")
+
+deepsort = DeepSort(model_path,
                     max_dist=cfg.DEEPSORT.MAX_DIST, min_confidence=cfg.DEEPSORT.MIN_CONFIDENCE,
                     nms_max_overlap=cfg.DEEPSORT.NMS_MAX_OVERLAP, max_iou_distance=cfg.DEEPSORT.MAX_IOU_DISTANCE,
                     max_age=cfg.DEEPSORT.MAX_AGE, n_init=cfg.DEEPSORT.N_INIT, nn_budget=cfg.DEEPSORT.NN_BUDGET,

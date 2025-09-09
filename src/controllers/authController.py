@@ -1,8 +1,9 @@
-# authController.py
+# src/controllers/authController.py
 from services.userService import UserService
 from views.login_window import LoginWindow
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import QTimer
+from utils.session_manager import SessionManager
 
 class AuthController:
     """
@@ -18,6 +19,7 @@ class AuthController:
         """
         self.login_window = login_window
         self.user_service = UserService()
+        self.session_manager = SessionManager()  # 初始化会话管理器
 
     def handle_login(self, username: str, password: str):
         """
@@ -36,7 +38,10 @@ class AuthController:
         user = self.user_service.authenticate_user(username, password)
 
         if user:
-            # 登录成功
+            # 登录成功，将用户名保存到会话中
+            self.session_manager.set_current_user(username)
+
+            # 显示成功消息并打开主程序界面
             self.login_window.show_success_message(f"欢迎，{username}！")
             # 1秒后打开主程序界面
             QTimer.singleShot(1000, self.login_window.open_main_window)

@@ -18,7 +18,7 @@ names:
   0: person
   1: bicycle
   2: car
-  3: motorcycle
+  3: motorcycle.py
   4: bus
   5: truck
   6: traffic_light
