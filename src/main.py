@@ -1,11 +1,8 @@
-# file: src/main.py
+# file: src/main_detect.py
 import sys
 import os
 from PyQt5.QtWidgets import QApplication
 from views.window_manager import WindowManager
-
-# 添加当前目录到Python路径
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     app = QApplication(sys.argv)

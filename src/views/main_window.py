@@ -93,7 +93,7 @@ class MainWindow(QWidget, Ui_Form):
         else:
             self.showMaximized()
 
-    # main.py (另一种方式)
+    # main_detect.py (另一种方式)
     def setup_left_content_layout(self):
         """
         设置左侧内容区域布局
