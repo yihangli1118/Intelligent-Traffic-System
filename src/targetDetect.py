@@ -66,7 +66,7 @@ if __name__ == '__main__':
     detector = Detector()
 
     # 打开视频
-    capture = cv2.VideoCapture('./video/video.mp4')
+    capture = cv2.VideoCapture('./videos/video.mp4')
     # capture = cv2.VideoCapture('/mnt/datasets/datasets/towncentre/TownCentreXVID.avi')
 
     while True:

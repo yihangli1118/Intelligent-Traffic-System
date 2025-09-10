@@ -41,3 +41,15 @@ class VideoController:
         处理跳转到指定位置的请求
         """
         self.video_service.seek_to_position(position)
+
+    def get_frame(self):
+        """
+        获取当前帧
+        """
+        return self.video_service.get_frame()
+
+    def process_frame_for_detection(self, frame):
+        """
+        处理帧以进行目标检测
+        """
+        return self.video_service.process_frame_for_detection(frame)

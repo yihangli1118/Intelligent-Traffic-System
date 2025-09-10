@@ -52,6 +52,9 @@ class MainWindow(QWidget, Ui_Form):
 
         # 初始化视频播放
         self.video_view = VideoView(self)
+        from controllers.videoController import VideoController
+        self.video_controller = VideoController(self)
+        self.video_view.set_controller(self.video_controller)
 
         # 设置 left_content 布局
         self.setup_left_content_layout()

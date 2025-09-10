@@ -2,11 +2,10 @@
 from typing import Dict, Any
 from datetime import datetime
 from typing import Optional
-from .object import Object
 
-class Vehicle(Object):
+class Vehicle:
     """
-    车辆实体类，继承自Object类
+    车辆实体类，独立类不继承自Object类
     """
 
     def __init__(self, vehicle_id: str = "", vehicle_type: str = "",
@@ -17,9 +16,6 @@ class Vehicle(Object):
                  driving_direction: str = "",
                  road_id: str = "",
                  photo: Optional[bytes] = None):
-        # 初始化父类Object的属性
-        super().__init__(entry_time, departure_time, driving_direction, road_id, photo)
-
         # Vehicle特有属性
         self.vehicle_id = vehicle_id
         self.vehicle_type = vehicle_type  # car, bus, truck
@@ -27,6 +23,13 @@ class Vehicle(Object):
         self.plate_color = plate_color
         self.body_color = body_color
         self.speed = speed  # 默认60km/h
+
+        # 原Object类的属性
+        self.entry_time = entry_time
+        self.departure_time = departure_time
+        self.driving_direction = driving_direction  # 上行 or 下行
+        self.road_id = road_id
+        self.photo = photo
 
     # Getter 方法
     def get_vehicle_id(self) -> str:
@@ -47,6 +50,21 @@ class Vehicle(Object):
     def get_speed(self) -> float:
         return self.speed
 
+    def get_entry_time(self) -> Optional[datetime]:
+        return self.entry_time
+
+    def get_departure_time(self) -> Optional[datetime]:
+        return self.departure_time
+
+    def get_driving_direction(self) -> str:
+        return self.driving_direction
+
+    def get_road_id(self) -> str:
+        return self.road_id
+
+    def get_photo(self) -> Optional[bytes]:
+        return self.photo
+
     # Setter 方法
     def set_vehicle_id(self, vehicle_id: str):
         self.vehicle_id = vehicle_id
@@ -65,6 +83,21 @@ class Vehicle(Object):
 
     def set_speed(self, speed: float):
         self.speed = speed
+
+    def set_entry_time(self, entry_time: datetime):
+        self.entry_time = entry_time
+
+    def set_departure_time(self, departure_time: datetime):
+        self.departure_time = departure_time
+
+    def set_driving_direction(self, driving_direction: str):
+        self.driving_direction = driving_direction
+
+    def set_road_id(self, road_id: str):
+        self.road_id = road_id
+
+    def set_photo(self, photo: bytes):
+        self.photo = photo
 
     def update_vehicle_info(self, vehicle_id: str, info: Dict[str, Any]) -> bool:
         """
@@ -90,6 +123,7 @@ class Vehicle(Object):
         return True
 
     def __str__(self):
-        base_str = super().__str__()
-        return (f"Vehicle({base_str}, id='{self.vehicle_id}', type='{self.vehicle_type}', "
+        return (f"Vehicle(entry_time={self.entry_time}, departure_time={self.departure_time}, "
+                f"driving_direction='{self.driving_direction}', road_id='{self.road_id}', "
+                f"id='{self.vehicle_id}', type='{self.vehicle_type}', "
                 f"plate='{self.plate_number}', speed={self.speed}km/h)")
