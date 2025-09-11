@@ -46,13 +46,13 @@ class Ui_Form(object):
         self.horizontalLayout_3.addItem(spacerItem)
         self.icon = QtWidgets.QPushButton(self.leftBox)
         self.icon.setMaximumSize(QtCore.QSize(30, 16777215))
-        self.icon.setStyleSheet("background-color: rgb(33, 37, 43);\n"
+        self.icon.setStyleSheet("background-color:#21252B;\n"
 "border:none")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/icons/github-fill.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/images/images/logo1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
-        self.icon.setIconSize(QtCore.QSize(28, 28))
+        self.icon.setIconSize(QtCore.QSize(32, 32))
         self.icon.setObjectName("icon")
         self.horizontalLayout_3.addWidget(self.icon)
         spacerItem1 = QtWidgets.QSpacerItem(5, 13, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -87,7 +87,7 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "#rightButtons .QPushButton:hover { \n"
-"    background-color: #2C3139; \n"
+"    background-color: rgb(120, 120, 120); \n"
 "    border-style: solid; \n"
 "    border-radius: 4px; \n"
 "}\n"
@@ -105,17 +105,6 @@ class Ui_Form(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setSpacing(5)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.user_pic = QtWidgets.QPushButton(self.rightButtons)
-        self.user_pic.setMinimumSize(QtCore.QSize(28, 28))
-        self.user_pic.setMaximumSize(QtCore.QSize(28, 28))
-        self.user_pic.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.user_pic.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/steam.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.user_pic.setIcon(icon1)
-        self.user_pic.setIconSize(QtCore.QSize(20, 20))
-        self.user_pic.setObjectName("user_pic")
-        self.horizontalLayout_2.addWidget(self.user_pic)
         self.user_name = QtWidgets.QLineEdit(self.rightButtons)
         self.user_name.setMaximumSize(QtCore.QSize(50, 16777215))
         self.user_name.setStyleSheet("color: rgb(255, 255, 255);\n"
@@ -124,6 +113,17 @@ class Ui_Form(object):
         self.user_name.setAlignment(QtCore.Qt.AlignCenter)
         self.user_name.setObjectName("user_name")
         self.horizontalLayout_2.addWidget(self.user_name)
+        self.user_pic = QtWidgets.QPushButton(self.rightButtons)
+        self.user_pic.setMinimumSize(QtCore.QSize(28, 28))
+        self.user_pic.setMaximumSize(QtCore.QSize(28, 28))
+        self.user_pic.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.user_pic.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/images/images/person2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.user_pic.setIcon(icon1)
+        self.user_pic.setIconSize(QtCore.QSize(22, 22))
+        self.user_pic.setObjectName("user_pic")
+        self.horizontalLayout_2.addWidget(self.user_pic)
         self.settingsTopBtn = QtWidgets.QPushButton(self.rightButtons)
         self.settingsTopBtn.setMinimumSize(QtCore.QSize(28, 28))
         self.settingsTopBtn.setMaximumSize(QtCore.QSize(28, 28))
@@ -190,6 +190,13 @@ class Ui_Form(object):
         self.UnderContent.setObjectName("UnderContent")
         self.sideBar = QtWidgets.QFrame(self.UnderContent)
         self.sideBar.setGeometry(QtCore.QRect(-1, -1, 81, 781))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.sideBar.sizePolicy().hasHeightForWidth())
+        self.sideBar.setSizePolicy(sizePolicy)
+        self.sideBar.setMinimumSize(QtCore.QSize(81, 0))
+        self.sideBar.setMaximumSize(QtCore.QSize(81, 781))
         self.sideBar.setStyleSheet("/* 默认 */\n"
 "\n"
 "QToolButton{   \n"
@@ -272,6 +279,7 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.infoQuery, 1, 1, 1, 1)
         self.content = QtWidgets.QFrame(self.UnderContent)
         self.content.setGeometry(QtCore.QRect(59, -1, 1271, 781))
+        self.content.setMinimumSize(QtCore.QSize(1271, 781))
         self.content.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.content.setFrameShadow(QtWidgets.QFrame.Raised)
         self.content.setObjectName("content")
@@ -280,7 +288,7 @@ class Ui_Form(object):
         self.stackedWidget.setObjectName("stackedWidget")
         self.Home = QtWidgets.QWidget()
         self.Home.setStyleSheet("background-position: center;\n"
-"background-image: url(:/images/images/PyDracula_1.png);\n"
+"background-image: url(:/images/images/logo.png);\n"
 "background-repeat: no-repeat;\n"
 "")
         self.Home.setObjectName("Home")
@@ -983,25 +991,14 @@ class Ui_Form(object):
         self.stackedWidget_2.setGeometry(QtCore.QRect(0, 50, 1241, 721))
         self.stackedWidget_2.setObjectName("stackedWidget_2")
         self.home_sub = QtWidgets.QWidget()
-        self.home_sub.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.home_sub.setStyleSheet("")
         self.home_sub.setObjectName("home_sub")
-        self.frame = QtWidgets.QFrame(self.home_sub)
-        self.frame.setGeometry(QtCore.QRect(0, 0, 1241, 721))
-        self.frame.setStyleSheet("background-color: rgb(40, 44, 52);")
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.label_query_4 = QtWidgets.QLabel(self.frame)
-        self.label_query_4.setGeometry(QtCore.QRect(440, 200, 421, 151))
-        self.label_query_4.setMinimumSize(QtCore.QSize(200, 0))
-        font = QtGui.QFont()
-        font.setFamily("汉仪雅酷黑X 85W")
-        font.setPointSize(36)
-        font.setBold(True)
-        self.label_query_4.setFont(font)
-        self.label_query_4.setStyleSheet("color: rgb(0, 170, 255);\n"
-"")
-        self.label_query_4.setObjectName("label_query_4")
+        self.label = QtWidgets.QLabel(self.home_sub)
+        self.label.setGeometry(QtCore.QRect(313, 130, 611, 421))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/images/images/query1.png"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
         self.stackedWidget_2.addWidget(self.home_sub)
         self.info_query = QtWidgets.QWidget()
         self.info_query.setStyleSheet("background-color: rgb(255, 255, 255);")
@@ -1372,15 +1369,15 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(2)
-        self.stackedWidget_2.setCurrentIndex(2)
+        self.stackedWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.titleRightInfo.setText(_translate("Form", "Intelligent Traffic Management Systems"))
-        self.user_pic.setToolTip(_translate("Form", "Settings"))
         self.user_name.setText(_translate("Form", "用户名"))
+        self.user_pic.setToolTip(_translate("Form", "Settings"))
         self.settingsTopBtn.setToolTip(_translate("Form", "Settings"))
         self.minimizeAppBtn.setToolTip(_translate("Form", "Minimize"))
         self.maximizeRestoreAppBtn.setToolTip(_translate("Form", "Maximize"))
@@ -1410,7 +1407,6 @@ class Ui_Form(object):
         self.label_vio_rt.setText(_translate("Form", "违规信息"))
         self.violations.setText(_translate("Form", "违规查询"))
         self.flow.setText(_translate("Form", " 流量查询"))
-        self.label_query_4.setText(_translate("Form", "这是信息查询页面"))
         self.label_car_num.setText(_translate("Form", "车牌号"))
         self.label_violation.setText(_translate("Form", "违规类别"))
         self.comboBox_violation.setItemText(0, _translate("Form", "闯红灯"))
@@ -1426,4 +1422,3 @@ class Ui_Form(object):
         self.pBtn_vio_statistics.setText(_translate("Form", "违规数据分析"))
         self.label_query_flow.setText(_translate("Form", "历史数据"))
         self.pBtn_flow_statistics.setText(_translate("Form", "流量数据分析"))
-

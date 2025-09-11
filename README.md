@@ -110,6 +110,11 @@ This application failed to start because no Qt platform plugin could be initiali
 $env:QT_QPA_PLATFORM_PLUGIN_PATH = "$pwd\..\.venv\Lib\site-packages\PyQt5\Qt5\plugins"
 ```
 
+将.qrc文件转换为.py文件
+```sh
+pyrcc5 images\1.qrc -o resource.py
+```
+
 ## 项目文档
 
 <p align="center">

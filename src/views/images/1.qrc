@@ -273,6 +273,11 @@
     <file>icons/violations.png</file>
   </qresource>
   <qresource prefix="images">
+    <file>images/query1.png</file>
+    <file>images/logo.png</file>
+    <file>images/logo1.png</file>
+    <file>images/person2.png</file>
+    <file>images/person.png</file>
     <file>images/output_data.png</file>
     <file>images/background.jpg</file>
     <file>images/PyDracula_1.png</file>

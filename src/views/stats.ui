@@ -116,7 +116,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(33, 37, 43);
+          <string notr="true">background-color:#21252B;
 border:none</string>
          </property>
          <property name="text">
@@ -124,12 +124,12 @@ border:none</string>
          </property>
          <property name="icon">
           <iconset resource="images/1.qrc">
-           <normaloff>:/icons/icons/github-fill.png</normaloff>:/icons/icons/github-fill.png</iconset>
+           <normaloff>:/images/images/logo1.png</normaloff>:/images/images/logo1.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -207,7 +207,7 @@ border:none</string>
 }
 
 #rightButtons .QPushButton:hover { 
-    background-color: #2C3139; 
+    background-color: rgb(120, 120, 120); 
     border-style: solid; 
     border-radius: 4px; 
 }
@@ -242,6 +242,27 @@ border:none</string>
         <number>0</number>
        </property>
        <item>
+        <widget class="QLineEdit" name="user_name">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(33, 37, 43);
+border-width:0;border-style:outset</string>
+         </property>
+         <property name="text">
+          <string>用户名</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="user_pic">
          <property name="minimumSize">
           <size>
@@ -266,34 +287,13 @@ border:none</string>
          </property>
          <property name="icon">
           <iconset resource="images/1.qrc">
-           <normaloff>:/icons/icons/steam.png</normaloff>:/icons/icons/steam.png</iconset>
+           <normaloff>:/images/images/person2.png</normaloff>:/images/images/person2.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>20</width>
-           <height>20</height>
+           <width>22</width>
+           <height>22</height>
           </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="user_name">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(33, 37, 43);
-border-width:0;border-style:outset</string>
-         </property>
-         <property name="text">
-          <string>用户名</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -484,6 +484,24 @@ QFrame#content{
       <height>781</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>81</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>81</width>
+      <height>781</height>
+     </size>
+    </property>
     <property name="styleSheet">
      <string notr="true">/* 默认 */
 
@@ -665,6 +683,12 @@ QToolButton:pressed,QToolButton:checked{
       <height>781</height>
      </rect>
     </property>
+    <property name="minimumSize">
+     <size>
+      <width>1271</width>
+      <height>781</height>
+     </size>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -686,7 +710,7 @@ QToolButton:pressed,QToolButton:checked{
      <widget class="QWidget" name="Home">
       <property name="styleSheet">
        <string notr="true">background-position: center;
-background-image: url(:/images/images/PyDracula_1.png);
+background-image: url(:/images/images/logo.png);
 background-repeat: no-repeat;
 </string>
       </property>
@@ -2271,60 +2295,30 @@ r</string>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="home_sub">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true"/>
         </property>
-        <widget class="QFrame" name="frame">
+        <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>1241</width>
-           <height>721</height>
+           <x>313</x>
+           <y>130</y>
+           <width>611</width>
+           <height>421</height>
           </rect>
          </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(40, 44, 52);</string>
+         <property name="text">
+          <string/>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+         <property name="pixmap">
+          <pixmap resource="images/1.qrc">:/images/images/query1.png</pixmap>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
-         <widget class="QLabel" name="label_query_4">
-          <property name="geometry">
-           <rect>
-            <x>440</x>
-            <y>200</y>
-            <width>421</width>
-            <height>151</height>
-           </rect>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>200</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>汉仪雅酷黑X 85W</family>
-            <pointsize>36</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 170, 255);
-</string>
-          </property>
-          <property name="text">
-           <string>这是信息查询页面</string>
-          </property>
-         </widget>
         </widget>
        </widget>
        <widget class="QWidget" name="info_query">
@@ -3113,7 +3107,6 @@ QPushButton:pressed,QToolButton:checked{
  </widget>
  <resources>
   <include location="images/1.qrc"/>
-  <include location="../Modern_GUI_PyDracula_PySide6_or_PyQt6/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
