@@ -273,6 +273,7 @@
     <file>icons/violations.png</file>
   </qresource>
   <qresource prefix="images">
+    <file>images/background_PhotoGrid.png</file>
     <file>images/query1.png</file>
     <file>images/logo.png</file>
     <file>images/logo1.png</file>

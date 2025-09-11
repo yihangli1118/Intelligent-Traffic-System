@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1346</width>
-    <height>858</height>
+    <width>1882</width>
+    <height>1161</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,20 +23,20 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1330</width>
-     <height>50</height>
+     <width>1740</width>
+     <height>90</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
-     <height>50</height>
+     <height>90</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>16777215</width>
-     <height>50</height>
+     <height>70</height>
     </size>
    </property>
    <property name="frameShape">
@@ -109,9 +109,15 @@
        </item>
        <item>
         <widget class="QPushButton" name="icon">
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>70</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>110</width>
            <height>16777215</height>
           </size>
          </property>
@@ -128,8 +134,8 @@ border:none</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>32</width>
-           <height>32</height>
+           <width>60</width>
+           <height>60</height>
           </size>
          </property>
         </widget>
@@ -167,7 +173,8 @@ border:none</string>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>12</pointsize>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
            <italic>false</italic>
            <bold>true</bold>
           </font>
@@ -176,7 +183,7 @@ border:none</string>
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Intelligent Traffic Management Systems</string>
+          <string>Intelligent Traffic Management System</string>
          </property>
          <property name="scaledContents">
           <bool>false</bool>
@@ -193,8 +200,14 @@ border:none</string>
      <widget class="QFrame" name="rightButtons">
       <property name="minimumSize">
        <size>
-        <width>0</width>
+        <width>200</width>
         <height>28</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>16777215</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -227,7 +240,7 @@ border:none</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <property name="spacing">
-        <number>5</number>
+        <number>0</number>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -243,11 +256,23 @@ border:none</string>
        </property>
        <item>
         <widget class="QLineEdit" name="user_name">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>50</width>
+           <width>100</width>
            <height>16777215</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Agency FB</family>
+           <pointsize>14</pointsize>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);
@@ -263,17 +288,17 @@ border-width:0;border-style:outset</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="user_pic">
+        <widget class="QPushButton" name="user_set">
          <property name="minimumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="cursor">
@@ -291,8 +316,8 @@ border-width:0;border-style:outset</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>22</width>
-           <height>22</height>
+           <width>36</width>
+           <height>36</height>
           </size>
          </property>
         </widget>
@@ -301,14 +326,14 @@ border-width:0;border-style:outset</string>
         <widget class="QPushButton" name="settingsTopBtn">
          <property name="minimumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="cursor">
@@ -326,8 +351,8 @@ border-width:0;border-style:outset</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>20</width>
-           <height>20</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -336,14 +361,14 @@ border-width:0;border-style:outset</string>
         <widget class="QPushButton" name="minimizeAppBtn">
          <property name="minimumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="cursor">
@@ -361,8 +386,8 @@ border-width:0;border-style:outset</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>20</width>
-           <height>20</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -371,20 +396,21 @@ border-width:0;border-style:outset</string>
         <widget class="QPushButton" name="maximizeRestoreAppBtn">
          <property name="minimumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="font">
           <font>
            <family>Segoe UI</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
            <stylestrategy>PreferDefault</stylestrategy>
@@ -405,8 +431,8 @@ border-width:0;border-style:outset</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>20</width>
-           <height>20</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -415,14 +441,14 @@ border-width:0;border-style:outset</string>
         <widget class="QPushButton" name="closeAppBtn">
          <property name="minimumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
-           <height>28</height>
+           <width>50</width>
+           <height>50</height>
           </size>
          </property>
          <property name="cursor">
@@ -440,8 +466,8 @@ border-width:0;border-style:outset</string>
          </property>
          <property name="iconSize">
           <size>
-           <width>18</width>
-           <height>18</height>
+           <width>26</width>
+           <height>26</height>
           </size>
          </property>
         </widget>
@@ -455,9 +481,9 @@ border-width:0;border-style:outset</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
-     <width>1331</width>
-     <height>781</height>
+     <y>90</y>
+     <width>1741</width>
+     <height>1001</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -480,26 +506,26 @@ QFrame#content{
      <rect>
       <x>-1</x>
       <y>-1</y>
-      <width>81</width>
-      <height>781</height>
+      <width>120</width>
+      <height>1001</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
     <property name="minimumSize">
      <size>
-      <width>81</width>
-      <height>0</height>
+      <width>120</width>
+      <height>1001</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>81</width>
-      <height>781</height>
+      <width>120</width>
+      <height>1000</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -510,8 +536,8 @@ QToolButton{
 	border-bottom: 7px outset transparent;
 	border-right: 3px outset transparent;
 	border-left: 3px outset transparent;
-    min-width: 80px;                            /* 控件最小宽度 */
-    min-height: 65px;
+    min-width: 110px;                            /* 控件最小宽度 */
+    min-height: 90px;
 	background-color: rgb(33, 37, 43);
 }
 
@@ -570,7 +596,8 @@ QToolButton:pressed,QToolButton:checked{
       <widget class="QToolButton" name="settingUp">
        <property name="font">
         <font>
-         <pointsize>8</pointsize>
+         <family>Agency FB</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -585,8 +612,43 @@ QToolButton:pressed,QToolButton:checked{
        </property>
        <property name="iconSize">
         <size>
-         <width>24</width>
-         <height>24</height>
+         <width>27</width>
+         <height>27</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QToolButton" name="infoQuery">
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>信息查询</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/1.qrc">
+         <normaloff>:/icons/icons/query.png</normaloff>:/icons/icons/query.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>27</width>
+         <height>27</height>
         </size>
        </property>
        <property name="checkable">
@@ -604,8 +666,8 @@ QToolButton:pressed,QToolButton:checked{
       <widget class="QToolButton" name="monitor">
        <property name="font">
         <font>
-         <family>黑体</family>
-         <pointsize>8</pointsize>
+         <family>Agency FB</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -620,8 +682,8 @@ QToolButton:pressed,QToolButton:checked{
        </property>
        <property name="iconSize">
         <size>
-         <width>20</width>
-         <height>20</height>
+         <width>27</width>
+         <height>27</height>
         </size>
        </property>
        <property name="checkable">
@@ -638,49 +700,15 @@ QToolButton:pressed,QToolButton:checked{
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QToolButton" name="infoQuery">
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>信息查询</string>
-       </property>
-       <property name="icon">
-        <iconset resource="images/1.qrc">
-         <normaloff>:/icons/icons/query.png</normaloff>:/icons/icons/query.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>20</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextUnderIcon</enum>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
    <widget class="QFrame" name="content">
     <property name="geometry">
      <rect>
-      <x>59</x>
+      <x>119</x>
       <y>-1</y>
-      <width>1271</width>
-      <height>781</height>
+      <width>1621</width>
+      <height>1001</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -698,14 +726,14 @@ QToolButton:pressed,QToolButton:checked{
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="geometry">
       <rect>
-       <x>29</x>
+       <x>-1</x>
        <y>-1</y>
-       <width>1241</width>
-       <height>771</height>
+       <width>1621</width>
+       <height>1001</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Home">
       <property name="styleSheet">
@@ -721,8 +749,8 @@ background-repeat: no-repeat;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>431</width>
-         <height>781</height>
+         <width>591</width>
+         <height>1001</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -738,10 +766,10 @@ background-color: rgb(40, 44, 52);</string>
        <widget class="QFrame" name="left_top">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>381</width>
-          <height>221</height>
+          <x>10</x>
+          <y>10</y>
+          <width>561</width>
+          <height>331</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -760,14 +788,14 @@ background-color: rgb(40, 44, 52);</string>
             <widget class="QFrame" name="totalNum_2">
              <property name="minimumSize">
               <size>
-               <width>110</width>
-               <height>0</height>
+               <width>200</width>
+               <height>100</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>110</width>
-               <height>70</height>
+               <width>200</width>
+               <height>200</height>
               </size>
              </property>
              <property name="frameShape">
@@ -792,57 +820,52 @@ background-color: rgb(40, 44, 52);</string>
               <property name="spacing">
                <number>0</number>
               </property>
-              <item row="1" column="0">
-               <widget class="QLineEdit" name="totalNumber_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_totalNum_2">
                 <property name="maximumSize">
                  <size>
-                  <width>90</width>
+                  <width>160</width>
                   <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>10</pointsize>
+                  <family>Microsoft YaHei UI</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(40, 44, 52);
-border-width:0;border-style:outset</string>
+                 <string notr="true">color: rgb(0, 170, 255);</string>
                 </property>
                 <property name="text">
-                 <string>---</string>
+                 <string> 现车流总数</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
+              <item row="3" column="0">
                <widget class="QFrame" name="totalUp_2">
                 <property name="minimumSize">
                  <size>
                   <width>100</width>
-                  <height>0</height>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Agency FB</family>
+                  <pointsize>9</pointsize>
+                 </font>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -874,22 +897,28 @@ border-width:0;border-style:outset</string>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>100</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="text">
-                    <string>同比增长</string>
+                    <string>同比增长 </string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -901,18 +930,19 @@ border-width:0;border-style:outset</string>
                    <property name="minimumSize">
                     <size>
                      <width>40</width>
-                     <height>0</height>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>60</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -931,26 +961,39 @@ border-width:0;border-style:outset</string>
                 </layout>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_totalNum_2">
+              <item row="2" column="0">
+               <widget class="QLineEdit" name="totalNumber_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Microsoft YaHei UI</family>
-                  <pointsize>10</pointsize>
-                  <bold>true</bold>
+                  <family>Agency FB</family>
+                  <pointsize>12</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(0, 170, 255);</string>
+                 <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(40, 44, 52);
+border-width:0;border-style:outset</string>
                 </property>
                 <property name="text">
-                 <string> 现车流总数</string>
+                 <string>---</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -964,14 +1007,14 @@ border-width:0;border-style:outset</string>
             <widget class="QFrame" name="totalNum_3">
              <property name="minimumSize">
               <size>
-               <width>110</width>
-               <height>0</height>
+               <width>200</width>
+               <height>100</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>110</width>
-               <height>70</height>
+               <width>200</width>
+               <height>200</height>
               </size>
              </property>
              <property name="frameShape">
@@ -1000,14 +1043,15 @@ border-width:0;border-style:outset</string>
                <widget class="QLabel" name="label_totalNum_4">
                 <property name="maximumSize">
                  <size>
-                  <width>90</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
                   <family>Microsoft YaHei UI</family>
-                  <pointsize>10</pointsize>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1038,13 +1082,14 @@ border-width:0;border-style:outset</string>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>90</width>
+                  <width>160</width>
                   <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>10</pointsize>
+                  <family>Agency FB</family>
+                  <pointsize>12</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1065,14 +1110,20 @@ border-width:0;border-style:outset</string>
                 <property name="minimumSize">
                  <size>
                   <width>100</width>
-                  <height>0</height>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Agency FB</family>
+                  <pointsize>9</pointsize>
+                 </font>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -1104,22 +1155,28 @@ border-width:0;border-style:outset</string>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>100</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="text">
-                    <string>同比增长</string>
+                    <string>同比增长 </string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1131,18 +1188,19 @@ border-width:0;border-style:outset</string>
                    <property name="minimumSize">
                     <size>
                      <width>40</width>
-                     <height>0</height>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>60</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1168,14 +1226,14 @@ border-width:0;border-style:outset</string>
             <widget class="QFrame" name="totalNum">
              <property name="minimumSize">
               <size>
-               <width>110</width>
-               <height>0</height>
+               <width>200</width>
+               <height>100</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>110</width>
-               <height>70</height>
+               <width>200</width>
+               <height>200</height>
               </size>
              </property>
              <property name="frameShape">
@@ -1204,14 +1262,15 @@ border-width:0;border-style:outset</string>
                <widget class="QLabel" name="label_totalNum">
                 <property name="maximumSize">
                  <size>
-                  <width>90</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
                   <family>Microsoft YaHei UI</family>
-                  <pointsize>10</pointsize>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1242,13 +1301,14 @@ border-width:0;border-style:outset</string>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>90</width>
+                  <width>160</width>
                   <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>10</pointsize>
+                  <family>Agency FB</family>
+                  <pointsize>12</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1269,13 +1329,13 @@ border-width:0;border-style:outset</string>
                 <property name="minimumSize">
                  <size>
                   <width>100</width>
-                  <height>0</height>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
-                  <height>20</height>
+                  <width>160</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="frameShape">
@@ -1308,22 +1368,29 @@ border-width:0;border-style:outset</string>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>100</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="text">
-                    <string>同比增长</string>
+                    <string>同比增长 </string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1335,18 +1402,19 @@ border-width:0;border-style:outset</string>
                    <property name="minimumSize">
                     <size>
                      <width>40</width>
-                     <height>0</height>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
-                     <height>20</height>
+                     <width>60</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>8</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>11</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1390,8 +1458,9 @@ border-width:0;border-style:outset</string>
           <widget class="QLabel" name="label_query">
            <property name="font">
             <font>
-             <family>汉仪雅酷黑X 85W</family>
-             <pointsize>12</pointsize>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1432,9 +1501,16 @@ border-width:0;border-style:outset</string>
              </property>
              <item>
               <widget class="QLabel" name="rt_start">
+               <property name="maximumSize">
+                <size>
+                 <width>120</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
-                 <pointsize>8</pointsize>
+                 <family>Agency FB</family>
+                 <pointsize>11</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -1455,7 +1531,7 @@ border-width:0;border-style:outset</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>1</width>
+                 <width>2</width>
                  <height>5</height>
                 </size>
                </property>
@@ -1465,19 +1541,20 @@ border-width:0;border-style:outset</string>
               <widget class="QDateTimeEdit" name="time_start">
                <property name="minimumSize">
                 <size>
-                 <width>130</width>
+                 <width>150</width>
                  <height>0</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>130</width>
+                 <width>150</width>
                  <height>16777215</height>
                 </size>
                </property>
                <property name="font">
                 <font>
-                 <pointsize>8</pointsize>
+                 <family>Agency FB</family>
+                 <pointsize>11</pointsize>
                 </font>
                </property>
                <property name="cursor">
@@ -1511,9 +1588,16 @@ border-width: 1px</string>
              </property>
              <item>
               <widget class="QLabel" name="rt_end">
+               <property name="maximumSize">
+                <size>
+                 <width>120</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
-                 <pointsize>8</pointsize>
+                 <family>Agency FB</family>
+                 <pointsize>11</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -1534,7 +1618,7 @@ border-width: 1px</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>20</width>
+                 <width>2</width>
                  <height>5</height>
                 </size>
                </property>
@@ -1544,19 +1628,20 @@ border-width: 1px</string>
               <widget class="QDateTimeEdit" name="time_end">
                <property name="minimumSize">
                 <size>
-                 <width>130</width>
+                 <width>150</width>
                  <height>0</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>130</width>
+                 <width>150</width>
                  <height>16777215</height>
                 </size>
                </property>
                <property name="font">
                 <font>
-                 <pointsize>8</pointsize>
+                 <family>Agency FB</family>
+                 <pointsize>11</pointsize>
                 </font>
                </property>
                <property name="cursor">
@@ -1638,7 +1723,9 @@ border-width: 1px</string>
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Agency FB</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -1676,7 +1763,9 @@ border-width: 1px</string>
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Agency FB</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -1713,10 +1802,10 @@ border-width: 1px</string>
       <widget class="QFrame" name="center_content">
        <property name="geometry">
         <rect>
-         <x>430</x>
+         <x>590</x>
          <y>0</y>
-         <width>411</width>
-         <height>781</height>
+         <width>541</width>
+         <height>1001</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1731,10 +1820,10 @@ border-width: 1px</string>
        <widget class="QWidget" name="vedio_ori" native="true">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>70</y>
-          <width>361</width>
-          <height>231</height>
+          <x>10</x>
+          <y>90</y>
+          <width>521</width>
+          <height>361</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1744,10 +1833,10 @@ border-width: 1px</string>
        <widget class="QWidget" name="vedio_pro" native="true">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>330</y>
-          <width>361</width>
-          <height>241</height>
+          <x>10</x>
+          <y>490</y>
+          <width>521</width>
+          <height>361</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1757,9 +1846,9 @@ border-width: 1px</string>
        <widget class="QWidget" name="widget" native="true">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>590</y>
-          <width>361</width>
+          <x>10</x>
+          <y>890</y>
+          <width>511</width>
           <height>41</height>
          </rect>
         </property>
@@ -1783,15 +1872,21 @@ border-width: 1px</string>
           <widget class="QPushButton" name="pushButton_3">
            <property name="minimumSize">
             <size>
-             <width>70</width>
+             <width>90</width>
              <height>0</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>70</width>
+             <width>90</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Agency FB</family>
+             <pointsize>11</pointsize>
+            </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
@@ -1805,8 +1900,8 @@ border-width: 1px</string>
            </property>
            <property name="iconSize">
             <size>
-             <width>15</width>
-             <height>15</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
           </widget>
@@ -1906,16 +2001,17 @@ margin-bottom:4px;
        <widget class="QLabel" name="label_query_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>30</y>
-          <width>91</width>
-          <height>20</height>
+          <x>30</x>
+          <y>20</y>
+          <width>131</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>汉仪雅酷黑X 85W</family>
-          <pointsize>12</pointsize>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -1931,10 +2027,10 @@ margin-bottom:4px;
       <widget class="QFrame" name="right_content">
        <property name="geometry">
         <rect>
-         <x>830</x>
+         <x>1130</x>
          <y>0</y>
-         <width>411</width>
-         <height>781</height>
+         <width>481</width>
+         <height>1001</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1950,9 +2046,9 @@ margin-bottom:4px;
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>180</y>
-          <width>351</width>
-          <height>561</height>
+          <y>250</y>
+          <width>431</width>
+          <height>651</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="right_under">
@@ -1968,7 +2064,7 @@ margin-bottom:4px;
              </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>10</width>
+               <width>30</width>
                <height>20</height>
               </size>
              </property>
@@ -1978,8 +2074,9 @@ margin-bottom:4px;
             <widget class="QLabel" name="label_vio_rt">
              <property name="font">
               <font>
-               <family>汉仪雅酷黑X 85W</family>
-               <pointsize>12</pointsize>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -2094,8 +2191,8 @@ QScrollBar::add-line:horizontal {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>339</width>
-              <height>1018</height>
+              <width>419</width>
+              <height>1026</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -2136,7 +2233,7 @@ QScrollBar::add-line:horizontal {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1241</width>
+         <width>1631</width>
          <height>51</height>
         </rect>
        </property>
@@ -2149,7 +2246,7 @@ QToolButton{
 	border-right: 3px outset transparent;
 	border-left: 3px outset transparent;
 	border-bottom: 3px outset rgb(255, 255, 255);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
-    min-width: 120px;                            /* 控件最小宽度 */
+    min-width: 160px;                            /* 控件最小宽度 */
     min-height: 40px;
 	background-color: rgb(33, 37, 43);
 }
@@ -2163,12 +2260,7 @@ QToolButton:hover{
 QToolButton:pressed,QToolButton:checked{
 	border-bottom: 3px outset rgb(170, 99, 204);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
 	background-color:rgb(92, 0, 138);	
-}
-
-/* QPushButton:default {
-    border-color: navy; 
-} */
-</string>
+}</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -2176,7 +2268,7 @@ QToolButton:pressed,QToolButton:checked{
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,0,100">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -2194,9 +2286,16 @@ QToolButton:pressed,QToolButton:checked{
         </property>
         <item>
          <widget class="QToolButton" name="violations">
+          <property name="minimumSize">
+           <size>
+            <width>166</width>
+            <height>46</height>
+           </size>
+          </property>
           <property name="font">
            <font>
-            <pointsize>9</pointsize>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2211,8 +2310,8 @@ QToolButton:pressed,QToolButton:checked{
           </property>
           <property name="iconSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>26</width>
+            <height>26</height>
            </size>
           </property>
           <property name="checkable">
@@ -2228,6 +2327,18 @@ QToolButton:pressed,QToolButton:checked{
         </item>
         <item>
          <widget class="QToolButton" name="flow">
+          <property name="minimumSize">
+           <size>
+            <width>166</width>
+            <height>46</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
@@ -2240,8 +2351,8 @@ QToolButton:pressed,QToolButton:checked{
           </property>
           <property name="iconSize">
            <size>
-            <width>18</width>
-            <height>18</height>
+            <width>26</width>
+            <height>26</height>
            </size>
           </property>
           <property name="checkable">
@@ -2252,6 +2363,34 @@ QToolButton:pressed,QToolButton:checked{
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="blank_2">
+          <property name="minimumSize">
+           <size>
+            <width>1006</width>
+            <height>46</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* 默认 */
+
+QToolButton{   
+	border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */
+	border-bottom: 7px outset transparent;
+	border-right: 3px outset transparent;
+	border-left: 3px outset transparent;
+	border-bottom: 3px outset rgb(255, 255, 255);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+    min-width: 1000px;                            /* 控件最小宽度 */
+    min-height: 40px;
+	background-color: rgb(33, 37, 43);
+}
+r</string>
+          </property>
+          <property name="text">
+           <string/>
           </property>
          </widget>
         </item>
@@ -2290,12 +2429,12 @@ r</string>
         <rect>
          <x>0</x>
          <y>50</y>
-         <width>1241</width>
-         <height>721</height>
+         <width>1621</width>
+         <height>951</height>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="home_sub">
         <property name="styleSheet">
@@ -2304,10 +2443,10 @@ r</string>
         <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>313</x>
-           <y>130</y>
-           <width>611</width>
-           <height>421</height>
+           <x>460</x>
+           <y>180</y>
+           <width>741</width>
+           <height>501</height>
           </rect>
          </property>
          <property name="text">
@@ -2330,8 +2469,8 @@ r</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>800</width>
-           <height>721</height>
+           <width>951</width>
+           <height>951</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -2348,13 +2487,19 @@ r</string>
            <rect>
             <x>10</x>
             <y>20</y>
-            <width>700</width>
-            <height>103</height>
+            <width>900</width>
+            <height>181</height>
            </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>700</width>
+            <height>0</height>
+           </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>700</width>
+            <width>900</width>
             <height>16777215</height>
            </size>
           </property>
@@ -2373,7 +2518,8 @@ r</string>
                 <widget class="QLabel" name="label_car_num">
                  <property name="font">
                   <font>
-                   <pointsize>10</pointsize>
+                   <family>Agency FB</family>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -2391,15 +2537,21 @@ r</string>
                 <widget class="QLineEdit" name="lineEdit_violation">
                  <property name="minimumSize">
                   <size>
-                   <width>130</width>
-                   <height>30</height>
+                   <width>150</width>
+                   <height>35</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>150</width>
-                   <height>30</height>
+                   <height>35</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Agency FB</family>
+                   <pointsize>12</pointsize>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QLineEdit{
@@ -2430,10 +2582,27 @@ r</string>
                 </spacer>
                </item>
                <item>
+                <spacer name="horizontalSpacer_14">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>5</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
                 <widget class="QLabel" name="label_violation">
                  <property name="font">
                   <font>
-                   <pointsize>10</pointsize>
+                   <family>Agency FB</family>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -2451,20 +2620,21 @@ r</string>
                 <widget class="QComboBox" name="comboBox_violation">
                  <property name="minimumSize">
                   <size>
-                   <width>150</width>
-                   <height>30</height>
+                   <width>200</width>
+                   <height>35</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>150</width>
-                   <height>30</height>
+                   <height>35</height>
                   </size>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Microsoft YaHei UI</family>
-                   <pointsize>9</pointsize>
+                   <family>Agency FB</family>
+                   <pointsize>12</pointsize>
+                   <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
                   </font>
@@ -2574,7 +2744,8 @@ QComboBox QAbstractItemView {
                   <widget class="QLabel" name="rt_end_2">
                    <property name="font">
                     <font>
-                     <pointsize>10</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>12</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -2605,19 +2776,20 @@ QComboBox QAbstractItemView {
                   <widget class="QDateTimeEdit" name="time_end_2">
                    <property name="minimumSize">
                     <size>
-                     <width>150</width>
-                     <height>0</height>
+                     <width>180</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>130</width>
-                     <height>16777215</height>
+                     <width>180</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
@@ -2641,7 +2813,7 @@ border-width: 1px</string>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>50</width>
+                   <width>80</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -2656,7 +2828,8 @@ border-width: 1px</string>
                   <widget class="QLabel" name="rt_end_3">
                    <property name="font">
                     <font>
-                     <pointsize>10</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>12</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -2687,19 +2860,20 @@ border-width: 1px</string>
                   <widget class="QDateTimeEdit" name="time_end_3">
                    <property name="minimumSize">
                     <size>
-                     <width>150</width>
-                     <height>0</height>
+                     <width>180</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>130</width>
-                     <height>16777215</height>
+                     <width>180</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
+                     <family>Agency FB</family>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
@@ -2740,19 +2914,20 @@ border-width: 1px</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>80</width>
-               <height>30</height>
+               <width>100</width>
+               <height>40</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>63</width>
-               <height>30</height>
+               <width>100</width>
+               <height>40</height>
               </size>
              </property>
              <property name="font">
               <font>
-               <pointsize>10</pointsize>
+               <family>Agency FB</family>
+               <pointsize>12</pointsize>
               </font>
              </property>
              <property name="styleSheet">
@@ -2799,19 +2974,20 @@ QPushButton:pressed,QToolButton:checked{
              </property>
              <property name="minimumSize">
               <size>
-               <width>100</width>
-               <height>30</height>
+               <width>150</width>
+               <height>40</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>120</width>
-               <height>30</height>
+               <width>150</width>
+               <height>40</height>
               </size>
              </property>
              <property name="font">
               <font>
-               <pointsize>10</pointsize>
+               <family>Agency FB</family>
+               <pointsize>12</pointsize>
               </font>
              </property>
              <property name="styleSheet">
@@ -2846,6 +3022,12 @@ QPushButton:pressed,QToolButton:checked{
               <iconset resource="images/1.qrc">
                <normaloff>:/images/images/output_data.png</normaloff>:/images/images/output_data.png</iconset>
              </property>
+             <property name="iconSize">
+              <size>
+               <width>22</width>
+               <height>22</height>
+              </size>
+             </property>
             </widget>
            </item>
           </layout>
@@ -2854,10 +3036,10 @@ QPushButton:pressed,QToolButton:checked{
         <widget class="QFrame" name="frame_statistics">
          <property name="geometry">
           <rect>
-           <x>805</x>
+           <x>955</x>
            <y>0</y>
-           <width>441</width>
-           <height>721</height>
+           <width>671</width>
+           <height>951</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -2872,10 +3054,10 @@ QPushButton:pressed,QToolButton:checked{
          <widget class="QPushButton" name="pBtn_vio_statistics">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>40</x>
             <y>20</y>
-            <width>150</width>
-            <height>30</height>
+            <width>191</width>
+            <height>45</height>
            </rect>
           </property>
           <property name="sizePolicy">
@@ -2887,14 +3069,20 @@ QPushButton:pressed,QToolButton:checked{
           <property name="minimumSize">
            <size>
             <width>150</width>
-            <height>30</height>
+            <height>45</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>200</width>
-            <height>30</height>
+            <height>45</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>12</pointsize>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton{
@@ -2928,14 +3116,20 @@ QPushButton:pressed,QToolButton:checked{
            <iconset resource="images/1.qrc">
             <normaloff>:/images/images/statistics.png</normaloff>:/images/images/statistics.png</iconset>
           </property>
+          <property name="iconSize">
+           <size>
+            <width>28</width>
+            <height>28</height>
+           </size>
+          </property>
          </widget>
          <widget class="QWidget" name="widget_vio_statistics" native="true">
           <property name="geometry">
            <rect>
-            <x>20</x>
-            <y>70</y>
-            <width>391</width>
-            <height>631</height>
+            <x>40</x>
+            <y>100</y>
+            <width>591</width>
+            <height>821</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -2957,8 +3151,8 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>800</width>
-           <height>721</height>
+           <width>951</width>
+           <height>951</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -2975,14 +3169,15 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
            <rect>
             <x>50</x>
             <y>20</y>
-            <width>91</width>
-            <height>21</height>
+            <width>141</width>
+            <height>41</height>
            </rect>
           </property>
           <property name="font">
            <font>
-            <family>汉仪雅酷黑X 85W</family>
-            <pointsize>12</pointsize>
+            <family>Microsoft YaHei UI</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -2998,10 +3193,10 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
         <widget class="QFrame" name="frame_statistics_flow">
          <property name="geometry">
           <rect>
-           <x>805</x>
+           <x>955</x>
            <y>0</y>
-           <width>521</width>
-           <height>721</height>
+           <width>681</width>
+           <height>951</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -3016,10 +3211,10 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
          <widget class="QWidget" name="widget_flow_statistics" native="true">
           <property name="geometry">
            <rect>
-            <x>20</x>
-            <y>70</y>
-            <width>391</width>
-            <height>601</height>
+            <x>40</x>
+            <y>100</y>
+            <width>591</width>
+            <height>821</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -3033,10 +3228,10 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
          <widget class="QPushButton" name="pBtn_flow_statistics">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>40</x>
             <y>20</y>
-            <width>150</width>
-            <height>30</height>
+            <width>191</width>
+            <height>45</height>
            </rect>
           </property>
           <property name="sizePolicy">
@@ -3048,14 +3243,20 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
           <property name="minimumSize">
            <size>
             <width>150</width>
-            <height>30</height>
+            <height>45</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>200</width>
-            <height>30</height>
+            <height>45</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>12</pointsize>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton{
@@ -3088,6 +3289,12 @@ QPushButton:pressed,QToolButton:checked{
           <property name="icon">
            <iconset resource="images/1.qrc">
             <normaloff>:/images/images/statistics.png</normaloff>:/images/images/statistics.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>28</width>
+            <height>28</height>
+           </size>
           </property>
          </widget>
         </widget>

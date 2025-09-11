@@ -333,8 +333,8 @@ class FlowTableManager:
 
         # 创建导出数据按钮，样式与 output_vio 一致
         self.output_flow = QPushButton("导出数据")
-        self.output_flow.setMinimumSize(100, 30)
-        self.output_flow.setMaximumSize(120, 30)
+        self.output_flow.setMinimumSize(150, 40)
+        self.output_flow.setMaximumSize(150, 40)
         self.output_flow.setStyleSheet("""
             QPushButton{
                 background-color: rgb(40, 44, 52);

@@ -64,7 +64,6 @@ def select_all_users(conn):
     except sqlite3.Error as e:
         print(e)
 
-
 def main():
     database = "traffic.db"
 

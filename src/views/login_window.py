@@ -38,12 +38,6 @@ class LoginWindow(QMainWindow):
         # 连接顶部按钮功能
         self.setup_top_buttons()
 
-        # 模拟用户数据库（实际应用中应使用真实数据库）
-        # self.users = {
-        #     "1": "666",  # 修改管理员账号为1，密码为666
-        #     "user": "666"
-        # }
-
     def setup_top_buttons(self):
         """
         设置顶部按钮功能 - 登录界面的关闭按钮真正退出程序
@@ -88,33 +82,33 @@ class LoginWindow(QMainWindow):
         self.ui.stackedWidget.hide()
 
         # 调整content的位置和大小以填满整个窗口
-        self.ui.content.setGeometry(0, 0, 1330, 858)
+        self.ui.content.setGeometry(0, 0, 1740, 1001)
 
         # 创建一个新的主内容区域
         self.main_content = QFrame(self.ui.content)
-        self.main_content.setGeometry(0, 0, 1330, 808)  # 除去顶部50像素
+        self.main_content.setGeometry(0, 0, 1740, 1001)
         self.main_content.setObjectName("main_content")
+        self.main_content.setStyleSheet("""
+            QFrame#main_content {
+                background-image: url(:/images/images/background_PhotoGrid.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                border: none;
+            }
+        """)
 
         # 设置顶部栏标题
         self.ui.titleRightInfo.setText("智能交通管理系统 - 登录")
 
         # 隐藏顶栏的用户名和用户头像
         self.ui.user_name.hide()
-        self.ui.user_pic.hide()
+        self.ui.user_set.hide()
 
     def setup_background(self):
         """
-        设置背景图片
+        设置背景图片（此方法现在可以留空或移除）
         """
-        # 设置背景图片
-        self.main_content.setStyleSheet("""
-            QFrame#main_content {
-                background-image: url(:/images/images/background.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        """)
+        pass
 
     def setup_login_area(self):
         """
@@ -122,12 +116,19 @@ class LoginWindow(QMainWindow):
         """
         # 创建登录区域容器（放在右面）
         self.login_container = QFrame(self.main_content)
-        self.login_container.setGeometry(760, 100, 500, 600)  # 放在右面
+        # 调整登录容器大小和位置，使其靠右
+        container_width = 500
+        container_height = 600
+        x_pos = 1740 - container_width - 150  # 距离右边50像素
+        y_pos = (1001 - container_height) // 2  # 垂直居中
+        self.login_container.setGeometry(x_pos, y_pos, container_width, container_height)
         self.login_container.setStyleSheet("background-color: transparent;")
+        self.login_container.setAttribute(Qt.WA_TranslucentBackground, True)
 
         # 创建堆叠窗口用于切换登录和注册界面
         self.stacked_widget = QStackedWidget(self.login_container)
-        self.stacked_widget.setGeometry(0, 0, 500, 600)
+        self.stacked_widget.setGeometry(0, 0, container_width, container_height)
+        self.stacked_widget.setStyleSheet("background: transparent;")
 
         # 创建登录界面
         self.create_login_page()
@@ -566,5 +567,3 @@ class LoginWindow(QMainWindow):
         # 重新显示登录窗口
         new_login = LoginWindow()
         new_login.show()
-
-# 移除了原来的 main() 函数和 if __name__ == "__main__": 部分
