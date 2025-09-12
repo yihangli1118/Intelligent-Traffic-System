@@ -174,7 +174,6 @@ border:none</string>
           <font>
            <family>Segoe UI</family>
            <pointsize>16</pointsize>
-           <weight>75</weight>
            <italic>false</italic>
            <bold>true</bold>
           </font>
@@ -270,7 +269,7 @@ border:none</string>
          </property>
          <property name="font">
           <font>
-           <family>Agency FB</family>
+           <family>Microsoft YaHei UI</family>
            <pointsize>14</pointsize>
           </font>
          </property>
@@ -410,7 +409,6 @@ border-width:0;border-style:outset</string>
           <font>
            <family>Segoe UI</family>
            <pointsize>10</pointsize>
-           <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
            <stylestrategy>PreferDefault</stylestrategy>
@@ -596,7 +594,7 @@ QToolButton:pressed,QToolButton:checked{
       <widget class="QToolButton" name="settingUp">
        <property name="font">
         <font>
-         <family>Agency FB</family>
+         <family>Microsoft YaHei UI</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -631,7 +629,7 @@ QToolButton:pressed,QToolButton:checked{
       <widget class="QToolButton" name="infoQuery">
        <property name="font">
         <font>
-         <family>Agency FB</family>
+         <family>Microsoft YaHei UI</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -666,7 +664,7 @@ QToolButton:pressed,QToolButton:checked{
       <widget class="QToolButton" name="monitor">
        <property name="font">
         <font>
-         <family>Agency FB</family>
+         <family>Microsoft YaHei UI</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -733,7 +731,7 @@ QToolButton:pressed,QToolButton:checked{
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="Home">
       <property name="styleSheet">
@@ -789,7 +787,7 @@ background-color: rgb(40, 44, 52);</string>
              <property name="minimumSize">
               <size>
                <width>200</width>
-               <height>100</height>
+               <height>145</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -831,8 +829,7 @@ background-color: rgb(40, 44, 52);</string>
                 <property name="font">
                  <font>
                   <family>Microsoft YaHei UI</family>
-                  <pointsize>14</pointsize>
-                  <weight>75</weight>
+                  <pointsize>16</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -911,7 +908,7 @@ background-color: rgb(40, 44, 52);</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>11</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -929,7 +926,7 @@ background-color: rgb(40, 44, 52);</string>
                   <widget class="QLineEdit" name="lineEdit_totalUp_2">
                    <property name="minimumSize">
                     <size>
-                     <width>40</width>
+                     <width>70</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -941,8 +938,9 @@ background-color: rgb(40, 44, 52);</string>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>11</pointsize>
+                     <family>Times New Roman</family>
+                     <pointsize>14</pointsize>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -984,7 +982,7 @@ border-width:0;border-style:outset</string>
                 <property name="font">
                  <font>
                   <family>Agency FB</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>14</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1008,7 +1006,7 @@ border-width:0;border-style:outset</string>
              <property name="minimumSize">
               <size>
                <width>200</width>
-               <height>100</height>
+               <height>145</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -1050,8 +1048,7 @@ border-width:0;border-style:outset</string>
                 <property name="font">
                  <font>
                   <family>Microsoft YaHei UI</family>
-                  <pointsize>14</pointsize>
-                  <weight>75</weight>
+                  <pointsize>16</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1089,7 +1086,7 @@ border-width:0;border-style:outset</string>
                 <property name="font">
                  <font>
                   <family>Agency FB</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>14</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1169,7 +1166,7 @@ border-width:0;border-style:outset</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>11</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1187,7 +1184,7 @@ border-width:0;border-style:outset</string>
                   <widget class="QLineEdit" name="lineEdit_totalUp_4">
                    <property name="minimumSize">
                     <size>
-                     <width>40</width>
+                     <width>70</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -1199,8 +1196,9 @@ border-width:0;border-style:outset</string>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>11</pointsize>
+                     <family>Times New Roman</family>
+                     <pointsize>14</pointsize>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1227,7 +1225,7 @@ border-width:0;border-style:outset</string>
              <property name="minimumSize">
               <size>
                <width>200</width>
-               <height>100</height>
+               <height>145</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -1269,8 +1267,7 @@ border-width:0;border-style:outset</string>
                 <property name="font">
                  <font>
                   <family>Microsoft YaHei UI</family>
-                  <pointsize>14</pointsize>
-                  <weight>75</weight>
+                  <pointsize>16</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1308,7 +1305,7 @@ border-width:0;border-style:outset</string>
                 <property name="font">
                  <font>
                   <family>Agency FB</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>14</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1382,8 +1379,8 @@ border-width:0;border-style:outset</string>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>11</pointsize>
+                     <family>Microsoft YaHei UI</family>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1401,7 +1398,7 @@ border-width:0;border-style:outset</string>
                   <widget class="QLineEdit" name="lineEdit_totalUp">
                    <property name="minimumSize">
                     <size>
-                     <width>40</width>
+                     <width>70</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -1413,8 +1410,9 @@ border-width:0;border-style:outset</string>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>11</pointsize>
+                     <family>Times New Roman</family>
+                     <pointsize>14</pointsize>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1460,7 +1458,6 @@ border-width:0;border-style:outset</string>
             <font>
              <family>Microsoft YaHei UI</family>
              <pointsize>16</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1509,8 +1506,9 @@ border-width:0;border-style:outset</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Agency FB</family>
-                 <pointsize>11</pointsize>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>14</pointsize>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -1553,8 +1551,9 @@ border-width:0;border-style:outset</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Agency FB</family>
-                 <pointsize>11</pointsize>
+                 <family>Times New Roman</family>
+                 <pointsize>14</pointsize>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="cursor">
@@ -1563,6 +1562,13 @@ border-width:0;border-style:outset</string>
                <property name="styleSheet">
                 <string notr="true">color: rgb(255, 255, 255);
 border-width: 1px</string>
+               </property>
+               <property name="date">
+                <date>
+                 <year>2025</year>
+                 <month>9</month>
+                 <day>12</day>
+                </date>
                </property>
               </widget>
              </item>
@@ -1596,8 +1602,9 @@ border-width: 1px</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Agency FB</family>
-                 <pointsize>11</pointsize>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>14</pointsize>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -1640,8 +1647,9 @@ border-width: 1px</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Agency FB</family>
-                 <pointsize>11</pointsize>
+                 <family>Times New Roman</family>
+                 <pointsize>14</pointsize>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="cursor">
@@ -1650,6 +1658,13 @@ border-width: 1px</string>
                <property name="styleSheet">
                 <string notr="true">color: rgb(255, 255, 255);
 border-width: 1px</string>
+               </property>
+               <property name="date">
+                <date>
+                 <year>2025</year>
+                 <month>9</month>
+                 <day>12</day>
+                </date>
                </property>
               </widget>
              </item>
@@ -1723,10 +1738,9 @@ border-width: 1px</string>
               </property>
               <property name="font">
                <font>
-                <family>Agency FB</family>
-                <pointsize>11</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <family>Microsoft YaHei UI</family>
+                <pointsize>14</pointsize>
+                <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
@@ -1763,10 +1777,9 @@ border-width: 1px</string>
               </property>
               <property name="font">
                <font>
-                <family>Agency FB</family>
-                <pointsize>11</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <family>Microsoft YaHei UI</family>
+                <pointsize>14</pointsize>
+                <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
@@ -1884,8 +1897,8 @@ border-width: 1px</string>
            </property>
            <property name="font">
             <font>
-             <family>Agency FB</family>
-             <pointsize>11</pointsize>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>14</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -1913,6 +1926,12 @@ border-width: 1px</string>
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="text">
             <string/>
@@ -2002,7 +2021,7 @@ margin-bottom:4px;
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>20</y>
+          <y>29</y>
           <width>131</width>
           <height>41</height>
          </rect>
@@ -2011,7 +2030,6 @@ margin-bottom:4px;
          <font>
           <family>Microsoft YaHei UI</family>
           <pointsize>16</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -2047,8 +2065,8 @@ margin-bottom:4px;
          <rect>
           <x>30</x>
           <y>250</y>
-          <width>431</width>
-          <height>651</height>
+          <width>421</width>
+          <height>687</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="right_under">
@@ -2076,7 +2094,6 @@ margin-bottom:4px;
               <font>
                <family>Microsoft YaHei UI</family>
                <pointsize>16</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -2096,7 +2113,7 @@ margin-bottom:4px;
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>520</height>
+             <height>650</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -2190,9 +2207,9 @@ QScrollBar::add-line:horizontal {
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
-              <width>419</width>
-              <height>1026</height>
+              <y>-368</y>
+              <width>409</width>
+              <height>1018</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -2434,7 +2451,7 @@ r</string>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="home_sub">
         <property name="styleSheet">
@@ -2518,8 +2535,8 @@ r</string>
                 <widget class="QLabel" name="label_car_num">
                  <property name="font">
                   <font>
-                   <family>Agency FB</family>
-                   <pointsize>12</pointsize>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>14</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -2550,7 +2567,7 @@ r</string>
                  <property name="font">
                   <font>
                    <family>Agency FB</family>
-                   <pointsize>12</pointsize>
+                   <pointsize>14</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -2601,8 +2618,8 @@ r</string>
                 <widget class="QLabel" name="label_violation">
                  <property name="font">
                   <font>
-                   <family>Agency FB</family>
-                   <pointsize>12</pointsize>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>14</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -2632,11 +2649,8 @@ r</string>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Agency FB</family>
-                   <pointsize>12</pointsize>
-                   <weight>50</weight>
-                   <italic>false</italic>
-                   <bold>false</bold>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>14</pointsize>
                   </font>
                  </property>
                  <property name="autoFillBackground">
@@ -2744,8 +2758,8 @@ QComboBox QAbstractItemView {
                   <widget class="QLabel" name="rt_end_2">
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>12</pointsize>
+                     <family>Microsoft YaHei UI</family>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -2788,7 +2802,7 @@ QComboBox QAbstractItemView {
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
+                     <family>Times New Roman</family>
                      <pointsize>14</pointsize>
                     </font>
                    </property>
@@ -2828,8 +2842,8 @@ border-width: 1px</string>
                   <widget class="QLabel" name="rt_end_3">
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
-                     <pointsize>12</pointsize>
+                     <family>Microsoft YaHei UI</family>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -2872,7 +2886,7 @@ border-width: 1px</string>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Agency FB</family>
+                     <family>Times New Roman</family>
                      <pointsize>14</pointsize>
                     </font>
                    </property>
@@ -2926,8 +2940,8 @@ border-width: 1px</string>
              </property>
              <property name="font">
               <font>
-               <family>Agency FB</family>
-               <pointsize>12</pointsize>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>14</pointsize>
               </font>
              </property>
              <property name="styleSheet">
@@ -2986,8 +3000,8 @@ QPushButton:pressed,QToolButton:checked{
              </property>
              <property name="font">
               <font>
-               <family>Agency FB</family>
-               <pointsize>12</pointsize>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>14</pointsize>
               </font>
              </property>
              <property name="styleSheet">
@@ -3080,8 +3094,8 @@ QPushButton:pressed,QToolButton:checked{
           </property>
           <property name="font">
            <font>
-            <family>Agency FB</family>
-            <pointsize>12</pointsize>
+            <family>Microsoft YaHei UI</family>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -3177,7 +3191,6 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
            <font>
             <family>Microsoft YaHei UI</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3254,8 +3267,8 @@ border-bottom-left-radius: 8px;         /* 右上角圆角 */</string>
           </property>
           <property name="font">
            <font>
-            <family>Agency FB</family>
-            <pointsize>12</pointsize>
+            <family>Microsoft YaHei UI</family>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
