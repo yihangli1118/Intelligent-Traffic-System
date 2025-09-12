@@ -1468,7 +1468,7 @@ class Ui_Form(object):
         self.sideBar.raise_()
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 

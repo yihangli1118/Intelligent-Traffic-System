@@ -94,7 +94,7 @@ pip install -r requirements.txt
 ### 运行项目
 
 ```sh
-python main_detect.py
+python main.py
 ```
 
 ### Tips
