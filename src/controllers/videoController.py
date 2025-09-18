@@ -5,6 +5,11 @@ class VideoController:
     def __init__(self, view):
         self.view = view
         self.video_service = VideoService()
+        self.on_video_switched_callback = None  # 添加回调属性
+
+    def set_video_switched_callback(self, callback):
+        """设置视频切换回调"""
+        self.on_video_switched_callback = callback
 
     def open_video(self):
         """
@@ -16,7 +21,11 @@ class VideoController:
         """
         处理播放视频的请求
         """
-        return self.video_service.play_video(file_path)
+        result = self.video_service.play_video(file_path)
+        # 视频切换后调用回调
+        if result and self.on_video_switched_callback:
+            self.on_video_switched_callback()
+        return result
 
     def pause_video(self):
         """

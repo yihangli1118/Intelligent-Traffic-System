@@ -501,7 +501,7 @@ class DatabaseService:
                 tf.departureCount
             FROM trafficFlows tf
             LEFT JOIN roads r ON tf.roadId = r.roadId
-            ORDER BY tf.startTime DESC
+            ORDER BY tf.id DESC  
             LIMIT ?
             """
 

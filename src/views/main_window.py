@@ -131,6 +131,8 @@ class MainWindow(QWidget, Ui_Form):
         # 可以在这里添加其他初始化代码
         self.setWindowTitle("智能交通管理系统")
 
+        self.video_controller.set_video_switched_callback(self.on_video_switched)
+
     def setup_top_buttons(self):
         """
         设置顶部按钮功能
@@ -404,6 +406,7 @@ class MainWindow(QWidget, Ui_Form):
         try:
             # 获取最新的10条流量记录
             flow_records = self.get_latest_flow_records(10)
+            print(f"获取到 {len(flow_records)} 条流量记录用于显示")
 
             if flow_records:
                 # 清空当前文本
@@ -411,6 +414,7 @@ class MainWindow(QWidget, Ui_Form):
 
                 # 添加记录到文本框
                 for i,record in enumerate(flow_records):
+                    print(f"处理记录 {i}: {record}")  # 添加调试信息
                     # 格式化记录
                     formatted_record = self.format_flow_record(record)
                     self.plainTextEdit.appendPlainText(formatted_record)
@@ -440,6 +444,7 @@ class MainWindow(QWidget, Ui_Form):
                 db_service = self.video_controller.video_service.database_service
 
                 # 获取最新的流量记录
+                db_service = self.video_controller.video_service.database_service
                 latest_flows = db_service.get_latest_traffic_flows(limit)
                 return latest_flows
 
@@ -722,7 +727,7 @@ class MainWindow(QWidget, Ui_Form):
 
             # 构建查询语句
             query = """
-                SELECT tf.road_id, r.road_name, tf.stat_time, tf.end_time, 
+                SELECT tf.road_id, r.road_name, tf.start_time, tf.end_time, 
                        tf.vehicle_count, tf.entry_count, tf.departure_count
                 FROM trafficFlows tf
                 LEFT JOIN roads r ON tf.road_id = r.road_id
@@ -732,7 +737,7 @@ class MainWindow(QWidget, Ui_Form):
 
             # 添加时间筛选条件
             if start_time:
-                query += " AND tf.stat_time >= ?"
+                query += " AND tf.start_time >= ?"
                 params.append(start_time)
 
             if end_time:
@@ -745,7 +750,7 @@ class MainWindow(QWidget, Ui_Form):
                 params.append(road_id)
 
             # 按时间排序
-            query += " ORDER BY tf.stat_time DESC"
+            query += " ORDER BY tf.start_time DESC"
 
             cursor.execute(query, params)
             rows = cursor.fetchall()
@@ -923,3 +928,39 @@ class MainWindow(QWidget, Ui_Form):
             return 9  # 9级超严重拥堵
         else:
             return 10  # 10级瘫痪
+
+    def on_video_switched(self):
+        """
+        视频切换后的回调处理
+        """
+        # 重启定时器以确保获取新的数据源
+        self.restart_timers()
+
+    def restart_timers(self):
+        """
+        重启所有相关定时器
+        """
+        # 重启流量显示定时器
+        if hasattr(self, 'flow_display_timer'):
+            self.flow_display_timer.stop()
+            self.flow_display_timer.start(5000)
+
+        # 重启交通疏导策略提示定时器
+        if hasattr(self, 'advice_display_timer'):
+            self.advice_display_timer.stop()
+            self.advice_display_timer.start(5000)
+
+        # 重启交通统计定时器
+        if hasattr(self, 'traffic_stats_timer'):
+            self.traffic_stats_timer.stop()
+            self.traffic_stats_timer.start(5000)
+
+        # 重启车辆信息更新定时器
+        if hasattr(self, 'vehicle_update_timer'):
+            self.vehicle_update_timer.stop()
+            self.vehicle_update_timer.start(1000)
+
+        # 重启拥堵等级更新定时器
+        if hasattr(self, 'congestion_update_timer'):
+            self.congestion_update_timer.stop()
+            self.congestion_update_timer.start(5000)
