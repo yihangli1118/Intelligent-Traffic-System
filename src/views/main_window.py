@@ -14,6 +14,8 @@ from utils.session_manager import SessionManager
 from views.car_violation_view import CarViolationView
 from views.person_violation_view import PersonViolationView
 import views.resource
+import csv
+from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
 class MainWindow(QWidget, Ui_Form):
     def __init__(self):
@@ -121,6 +123,8 @@ class MainWindow(QWidget, Ui_Form):
 
         # 连接违规统计按钮点击事件
         self.pBtn_vio_statistics.clicked.connect(self.violation_table_manager.create_violation_pie_chart)
+
+        self.setup_export_buttons()
 
         # 设置流量查询页面布局
         self.setup_flow_layout()
@@ -964,3 +968,109 @@ class MainWindow(QWidget, Ui_Form):
         if hasattr(self, 'congestion_update_timer'):
             self.congestion_update_timer.stop()
             self.congestion_update_timer.start(5000)
+
+    # 在 main_window.py 的 MainWindow 类中添加以下方法
+
+    def setup_export_buttons(self):
+        """
+        设置导出按钮功能
+        """
+        # 连接车辆信息导出按钮
+        self.output_vio.clicked.connect(self.export_vehicle_data)
+
+        # 连接流量信息导出按钮
+        self.output_vio_2.clicked.connect(self.export_flow_data)
+
+    def export_vehicle_data(self):
+        """
+        导出车辆信息到CSV文件
+        """
+        try:
+            # 打开文件保存对话框
+            file_path, _ = QFileDialog.getSaveFileName(
+                self,
+                "导出车辆信息",
+                "车辆信息.csv",
+                "CSV文件 (*.csv)"
+            )
+
+            if not file_path:
+                return
+
+            # 从数据库获取最新的车辆信息
+            latest_vehicles = self.vehicle_table_manager.get_latest_vehicles(1000)  # 获取最多1000条记录
+
+            if not latest_vehicles:
+                QMessageBox.information(self, "提示", "没有可导出的车辆数据")
+                return
+
+            # 写入CSV文件
+            with open(file_path, 'w', newline='', encoding='utf-8-sig') as csvfile:
+                fieldnames = ['车牌号', '进入时间', '离开时间']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                # 写入表头
+                writer.writeheader()
+
+                # 写入数据
+                for vehicle in latest_vehicles:
+                    writer.writerow({
+                        '车牌号': vehicle['plate_number'],
+                        '进入时间': vehicle['entry_time'],
+                        '离开时间': vehicle['departure_time']
+                    })
+
+            QMessageBox.information(self, "成功", f"车辆信息已成功导出到:\n{file_path}")
+
+        except Exception as e:
+            QMessageBox.critical(self, "错误", f"导出车辆信息时出错:\n{str(e)}")
+            print(f"导出车辆信息时出错: {e}")
+
+    def export_flow_data(self):
+        """
+        导出流量信息到CSV文件
+        """
+        try:
+            # 打开文件保存对话框
+            file_path, _ = QFileDialog.getSaveFileName(
+                self,
+                "导出流量信息",
+                "流量信息.csv",
+                "CSV文件 (*.csv)"
+            )
+
+            if not file_path:
+                return
+
+            # 从数据库获取最新的流量记录
+            flow_records = self.get_latest_flow_records(1000)  # 获取最多1000条记录
+
+            if not flow_records:
+                QMessageBox.information(self, "提示", "没有可导出的流量数据")
+                return
+
+            # 写入CSV文件
+            with open(file_path, 'w', newline='', encoding='utf-8-sig') as csvfile:
+                fieldnames = ['路口序号', '路口名称', '开始时间', '结束时间', '车流总量', '驶入总数', '驶出总数']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                # 写入表头
+                writer.writeheader()
+
+                # 写入数据
+                for record in flow_records:
+                    writer.writerow({
+                        '路口序号': record.get('road_id', ''),
+                        '路口名称': record.get('road_name', ''),
+                        '开始时间': record.get('start_time', ''),
+                        '结束时间': record.get('end_time', ''),
+                        '车流总量': record.get('vehicle_count', 0),
+                        '驶入总数': record.get('entry_count', 0),
+                        '驶出总数': record.get('departure_count', 0)
+                    })
+
+            QMessageBox.information(self, "成功", f"流量信息已成功导出到:\n{file_path}")
+
+        except Exception as e:
+            QMessageBox.critical(self, "错误", f"导出流量信息时出错:\n{str(e)}")
+            print(f"导出流量信息时出错: {e}")

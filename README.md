@@ -53,9 +53,6 @@ Intelligent-Traffic-System
 │  ├── requirement analysis.md
 ├── /src/
 │  ├── main.py
-│  ├── requirements.txt
-│  ├── .pre-commit-config.yaml
-│  ├── __init__.py
 │  ├── car_color_recognition.py
 │  ├── detect_plate.py
 │  ├── detect_rec_plate.py
@@ -67,10 +64,6 @@ Intelligent-Traffic-System
 │  ├── test_db.py
 │  ├── tracker.py
 │  ├── train.py
-│  ├── push.sh
-│  ├── README.md
-│  ├── README_plate.md
-│  ├── train.sh
 │  ├── /controllers/
 │  ├── /models/
 │  ├── /services/
@@ -95,15 +88,23 @@ git clone https://github.com/yihangli1118/Intelligent-Traffic-System.git
 ```
 
 ### 创建虚拟环境
-
+#### 使用venv
 ```sh
 py -3.8 -m venv .venv
 ```
+#### 使用conda
+```sh
+conda create -n its python=3.8.10
+```
 
 ### 激活虚拟环境
-
+#### 使用venv
 ```sh
 .venv\Scripts\activate
+```
+#### 使用conda
+```sh
+conda activate its
 ```
 
 ### 安装项目依赖
@@ -149,6 +150,18 @@ python utils\database_cleaner.py
 ```
 
 ### git使用指南
+
+```bash
+git status
+```
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "注释"
+```
 `git reflog` 记录了你在本地仓库的所有操作历史（包括HEAD和分支的移动），所以即使你用了 `reset --hard`，也能在这里找到记录。
 
 1.  **打开终端/命令行**，进入你的项目目录。
@@ -193,29 +206,51 @@ python utils\database_cleaner.py
 
 ![](images/docs/ui/login.png)
 
-### **2.主页面**
+### **2.注册界面**
+![](images/docs/ui/register.png)
 
-![](images/docs/ui/main.png)
+### **3.主页面**
 
-### **3.实时监控页面**
+![](images/docs/ui/main_window.png)
 
-![](images/docs/ui/real-time%20monitor.png)
+### **4.实时监控页面**
 
-### **4.信息查询页面**
+![](images/docs/ui/main_detect_pro.png)
 
-![](images/docs/ui/info-query.png)
+### **5.实时监控检测页面**
 
-### **5.违规查询页面**
+![](images/docs/ui/main_detect.png)
 
-![](images/docs/ui/vio-query.png)
+### **3.车辆闯红灯检测页面**
 
-### **6.流量查询页面**
+![](images/docs/ui/car_vio.png)
 
-![](images/docs/ui/flow-query.png)
+### **4.行人闯红灯检测页面**
 
-### **7.关于我们页面**
+![](images/docs/ui/person_vio.png)
 
-![](images/docs/ui/about-us.png)
+### **5.信息查询页面**
+![](images/docs/ui/main_query.png)
+
+### **6.车辆查询页面**
+
+![](images/docs/ui/main_car_query.png)
+
+### **7.车辆查看详情页面**
+
+![](images/docs/ui/main_car_detail.png)
+
+### **8.流量查询页面**
+
+![](images/docs/ui/main_flow_query.png)
+
+### **9.流量查看详情页面**
+
+![](images/docs/ui/main_flow_detail.png)
+
+### **10.关于我们页面**
+
+![](images/docs/ui/about_us.png)
 
 ## 开发的架构 
 
